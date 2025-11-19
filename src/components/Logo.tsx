@@ -1,11 +1,49 @@
 import { cn } from '@/lib/utils';
-import { CircleDollarSign } from 'lucide-react';
 
 export function Logo({ className }: { className?: string }) {
   return (
-    <div className={cn('flex items-center gap-2', className)}>
-      <CircleDollarSign className="h-7 w-7 text-primary" />
-      <span className="text-xl font-bold tracking-tight">Razor Pay</span>
+    <div className={cn('flex items-center', className)}>
+      <svg
+        width="120"
+        height="24"
+        viewBox="0 0 120 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="text-foreground"
+      >
+        <path
+          d="M23.0339 6.84271V23.5H18.2803V12.7884L12.5191 23.5H8.625L2.86377 12.7884V23.5H-1.13687e-06V6.84271H4.63184L10.5361 17.5134L16.4404 6.84271H23.0339Z"
+          fill="currentColor"
+        />
+        <path
+          d="M36.4385 6.84271V23.5H31.6849V6.84271H36.4385Z"
+          fill="currentColor"
+        />
+        <path
+          d="M51.3533 23.5H46.5997V11.8978H41.5236V23.5H36.77V6.84271H41.5236V9.45337H46.5997V6.84271H51.3533V23.5Z"
+          fill="currentColor"
+        />
+        <path
+          d="M58.3377 15.1714C58.3377 19.8258 61.6441 23.5 67.5484 23.5C73.4527 23.5 76.7591 19.8258 76.7591 15.1714C76.7591 10.517 73.4527 6.84271 67.5484 6.84271C61.6441 6.84271 58.3377 10.517 58.3377 15.1714ZM71.9961 15.1714C71.9961 18.0673 70.2078 20.9221 67.5484 20.9221C64.889 20.9221 63.1008 18.0673 63.1008 15.1714C63.1008 12.2755 64.889 9.42065 67.5484 9.42065C70.2078 9.42065 71.9961 12.2755 71.9961 15.1714Z"
+          fill="currentColor"
+        />
+        <path
+          d="M87.6713 15.6533L89.7029 23.5H84.6648L83.6934 19.7847H79.6781L78.7067 23.5H73.6686L79.4678 6.84271H84.945L87.6713 15.6533ZM82.7219 17.2626H80.6523L81.6978 12.8686L82.7219 17.2626Z"
+          fill="currentColor"
+        />
+        <path
+          d="M101.442 23.5L95.5375 14.8021V23.5H90.7839V6.84271H94.1284L100.071 15.5311V6.84271H104.824V23.5H101.442Z"
+          fill="currentColor"
+        />
+        <path
+          d="M119.57 15.5311L116.52 10.3951L119.486 6.84271H114.167L112.508 9.33115L110.849 6.84271H105.53L108.496 10.3951L105.446 15.5311L110.765 23.5H112.508L114.251 23.5H116.208L119.57 15.5311ZM114.816 17.3037L112.508 20.8009L110.2 17.3037L112.508 13.5218L114.816 17.3037Z"
+          fill="currentColor"
+        />
+        <path
+          d="M23.034 6.84277L16.2715 0.5H4.21094L11.0117 6.84277H23.034Z"
+          fill="#3395FF"
+        />
+      </svg>
     </div>
   );
 }
