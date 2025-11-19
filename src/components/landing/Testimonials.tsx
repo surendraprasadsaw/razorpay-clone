@@ -28,7 +28,7 @@ export function Testimonials() {
       id: 'nischay-ag',
       name: 'Nischay AG',
       title: 'Co-founder, Jar',
-      image: null,
+      image: PlaceHolderImages.find((p) => p.id === 'testimonial-nischay'),
       quote:
         'RazorpayX works for most of our needs - be it our salaries, be it our compliance, be it our payments to vendors And the biggest headache of all OTPs went away.',
       size: 'medium',
