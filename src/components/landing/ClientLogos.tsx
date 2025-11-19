@@ -71,7 +71,7 @@ export function ClientLogos() {
       </div>
       <div
         className="flex animate-scroll"
-        style={{ animationDuration: '20s' }}
+        style={{ animationDuration: '10s' }}
       >
         {[...logos, ...logos].map((logo, index) => (
           <div key={index} className="flex-shrink-0 mx-6 flex items-center justify-center text-gray-500" style={{ minWidth: '120px' }}>
