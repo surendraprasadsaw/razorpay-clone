@@ -8,12 +8,6 @@ import { ArrowRight } from 'lucide-react';
 import { useState } from 'react';
 
 export function Testimonials() {
-  const [flippedCard, setFlippedCard] = useState<string | null>(null);
-
-  const handleFlip = (id: string) => {
-    setFlippedCard(flippedCard === id ? null : id);
-  };
-
   const testimonials = [
     {
       id: 'anusree-goenka',
@@ -89,65 +83,42 @@ export function Testimonials() {
               <Card
                 key={testimonial.id}
                 className={cn(
-                  'flex-shrink-0 rounded-xl overflow-hidden group perspective',
+                  'flex-shrink-0 rounded-xl overflow-hidden group',
                   testimonial.size === 'large' ? 'w-[300px]' : 'w-[320px]'
                 )}
-                onClick={() => testimonial.image && handleFlip(testimonial.id)}
               >
-                <div
-                  className={cn(
-                    'relative w-full h-full preserve-3d transition-transform duration-700',
-                    flippedCard === testimonial.id ? 'rotate-y-180' : ''
-                  )}
-                >
-                  <CardContent className="p-0 absolute w-full h-full backface-hidden">
-                    {testimonial.image ? (
-                      <div className="relative h-[400px]">
-                        <Image
-                          src={testimonial.image.imageUrl}
-                          alt={testimonial.name}
-                          fill
-                          className="object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
-                          data-ai-hint={testimonial.image.imageHint}
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                        <div className="absolute bottom-0 left-0 p-6 text-white">
-                          <p className="font-bold text-lg">
-                            {testimonial.name}
-                          </p>
-                          <p className="text-sm">{testimonial.title}</p>
-                        </div>
+                <CardContent className="p-0">
+                  {testimonial.image ? (
+                    <div className="relative h-[400px]">
+                      <Image
+                        src={testimonial.image.imageUrl}
+                        alt={testimonial.name}
+                        fill
+                        className="object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                        data-ai-hint={testimonial.image.imageHint}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                      <div className="absolute bottom-0 left-0 p-6 text-white">
+                        <p className="font-bold text-lg">
+                          {testimonial.name}
+                        </p>
+                        <p className="text-sm">{testimonial.title}</p>
                       </div>
-                    ) : (
-                      <div className="h-[400px] bg-card flex flex-col justify-center p-8">
-                        <blockquote className="text-lg font-medium mb-6">
-                          "{testimonial.quote}"
-                        </blockquote>
-                        <div>
-                          <p className="font-bold">{testimonial.name}</p>
-                          <p className="text-sm text-muted-foreground">
-                            {testimonial.title}
-                          </p>
-                        </div>
+                    </div>
+                  ) : (
+                    <div className="h-[400px] bg-card flex flex-col justify-center p-8">
+                      <blockquote className="text-lg font-medium mb-6">
+                        "{testimonial.quote}"
+                      </blockquote>
+                      <div>
+                        <p className="font-bold">{testimonial.name}</p>
+                        <p className="text-sm text-muted-foreground">
+                          {testimonial.title}
+                        </p>
                       </div>
-                    )}
-                  </CardContent>
-                  {testimonial.image && (
-                     <CardContent className="p-0 absolute w-full h-full backface-hidden rotate-y-180">
-                        <div className="h-[400px] bg-card flex flex-col justify-center p-8">
-                            <blockquote className="text-lg font-medium mb-6">
-                            "{testimonial.quote}"
-                            </blockquote>
-                            <div>
-                            <p className="font-bold">{testimonial.name}</p>
-                            <p className="text-sm text-muted-foreground">
-                                {testimonial.title}
-                            </p>
-                            </div>
-                        </div>
-                    </CardContent>
+                    </div>
                   )}
-                </div>
+                </CardContent>
               </Card>
             ))}
           </div>
