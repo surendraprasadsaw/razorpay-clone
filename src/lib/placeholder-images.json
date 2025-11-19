@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-image",
+      "description": "Abstract hero image representing digital flow",
+      "imageUrl": "https://images.unsplash.com/photo-1571867424488-4565932edb41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwcGF5bWVudHxlbnwwfHx8fDE3NjM1NTcwNDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "digital payment"
+    },
+    {
+      "id": "feature-secure",
+      "description": "Icon-like image for security feature",
+      "imageUrl": "https://images.unsplash.com/photo-1761805364333-3fe4285de824?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzZWN1cml0eSUyMHNoaWVsZHxlbnwwfHx8fDE3NjM1NTcwNDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "security shield"
+    },
+    {
+      "id": "feature-fast",
+      "description": "Icon-like image for speed feature",
+      "imageUrl": "https://images.unsplash.com/photo-1671163377628-a1542b9de075?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmYXN0JTIwcm9ja2V0fGVufDB8fHx8MTc2MzU1NzA0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fast rocket"
+    },
+    {
+      "id": "feature-global",
+      "description": "Icon-like image for global reach",
+      "imageUrl": "https://images.unsplash.com/photo-1626695436755-3e288720849c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxnbG9iZSUyMHdvcmxkfGVufDB8fHx8MTc2MzU1NzA0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "globe world"
+    }
+  ]
 }
