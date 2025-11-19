@@ -2,14 +2,11 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import {
   ArrowRight,
   ChevronRight,
   CreditCard,
   Laptop,
-  Smartphone,
-  Store,
   Wallet,
 } from 'lucide-react';
 
@@ -128,13 +125,13 @@ export function AcceptPayments() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="flex overflow-x-auto space-x-8 pb-8">
           {products.map((product) => (
             <Card
               key={product.id}
-              className="overflow-hidden flex flex-col group"
+              className="overflow-hidden flex flex-col group flex-shrink-0 w-[300px] md:w-[340px]"
             >
-              <CardContent className="p-0 flex-grow">
+              <CardContent className="p-0 flex-grow flex flex-col">
                 <div className="bg-muted/40 p-4 min-h-[250px] relative flex items-center justify-center">
                   {product.image && (
                     <Image
@@ -160,25 +157,27 @@ export function AcceptPayments() {
                      </Button>
                    )}
                 </div>
-                 {product.content ? (
-                  product.content
-                ) : (
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2">{product.title}</h3>
-                    <p className="text-muted-foreground text-sm mb-4">
-                      {product.description}
-                    </p>
-                    {product.actions}
-                  </div>
-                )}
-                 {product.id === 'payment-gateway' && (
-                   <div className="p-6 border-t">
+                 <div className="flex flex-col flex-grow">
+                  {product.content ? (
+                    product.content
+                  ) : (
+                    <div className="p-6 flex-grow flex flex-col">
                       <h3 className="text-xl font-bold mb-2">{product.title}</h3>
-                      <p className="text-muted-foreground text-sm">
+                      <p className="text-muted-foreground text-sm mb-4 flex-grow">
                         {product.description}
                       </p>
-                   </div>
-                 )}
+                      {product.actions}
+                    </div>
+                  )}
+                  {product.id === 'payment-gateway' && (
+                    <div className="p-6 border-t mt-auto">
+                        <h3 className="text-xl font-bold mb-2">{product.title}</h3>
+                        <p className="text-muted-foreground text-sm">
+                          {product.description}
+                        </p>
+                    </div>
+                  )}
+                </div>
               </CardContent>
             </Card>
           ))}
