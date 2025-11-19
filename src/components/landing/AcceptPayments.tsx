@@ -101,7 +101,7 @@ export function AcceptPayments() {
 
   return (
     <section className="py-20 bg-secondary/30">
-      <div className="container">
+      <div className="container max-w-screen-lg mx-auto p-8 border rounded-lg bg-card">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold">Accept Payments</h2>
         </div>
@@ -125,7 +125,7 @@ export function AcceptPayments() {
           </div>
         </div>
 
-        <div className="flex overflow-x-auto space-x-8 pb-8">
+        <div className="flex overflow-x-auto space-x-8 pb-8 -m-4 p-4">
           {products.map((product) => (
             <Card
               key={product.id}
