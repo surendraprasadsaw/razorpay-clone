@@ -3,15 +3,16 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import {
-  Activity,
+  GraduationCap,
+  MessageSquareMore,
+  BriefcaseMedical,
+  FileCode,
+  ShoppingBag as ShoppingBagIcon,
   ArrowRight,
   BookOpen,
-  Briefcase,
-  Code,
   Landmark,
-  Play,
-  ShoppingBag,
-  Users,
+  Code,
+  Briefcase,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -25,7 +26,7 @@ export function PoweringEveryIndustry() {
   const industries = [
     {
       name: 'E-Commerce',
-      icon: <ShoppingBag className="w-5 h-5 mr-2" />,
+      icon: <ShoppingBagIcon className="w-5 h-5 mr-2" />,
     },
     {
       name: 'Education',
@@ -46,11 +47,11 @@ export function PoweringEveryIndustry() {
   ];
 
   const icons = [
-    <Activity key="activity" className="w-6 h-6" />,
-    <Users key="users" className="w-6 h-6" />,
-    <Briefcase key="briefcase" className="w-6 h-6" />,
-    <BookOpen key="book-open" className="w-6 h-6" />,
-    <Play key="play" className="w-6 h-6" />,
+    <GraduationCap key="graduation" className="w-6 h-6" />,
+    <MessageSquareMore key="message" className="w-6 h-6" />,
+    <BriefcaseMedical key="medical" className="w-6 h-6" />,
+    <FileCode key="code" className="w-6 h-6" />,
+    <ShoppingBagIcon key="shopping" className="w-6 h-6" />,
   ];
 
   const [currentIconIndex, setCurrentIconIndex] = useState(0);
