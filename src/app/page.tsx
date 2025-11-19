@@ -3,6 +3,7 @@ import { Hero } from '@/components/landing/Hero';
 import { Features } from '@/components/landing/Features';
 import { FaqSection } from '@/components/landing/FaqSection';
 import { Footer } from '@/components/landing/Footer';
+import { ClientLogos } from '@/components/landing/ClientLogos';
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Header />
       <main className="flex-grow">
         <Hero />
+        <ClientLogos />
         <Features />
         <FaqSection />
       </main>
