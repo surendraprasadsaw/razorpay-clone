@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import {
   Activity,
@@ -53,6 +53,16 @@ export function PoweringEveryIndustry() {
     <Play key="play" className="w-6 h-6" />,
   ];
 
+  const [currentIconIndex, setCurrentIconIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIconIndex((prevIndex) => (prevIndex + 1) % icons.length);
+    }, 1500);
+    return () => clearInterval(interval);
+  }, [icons.length]);
+
+
   const clientLogos = [
     { name: 'Nykaa', logo: <span className="font-bold text-lg">NYKAA</span> },
     {
@@ -86,7 +96,9 @@ export function PoweringEveryIndustry() {
           </div>
           <div className="hidden md:flex items-center space-x-6 text-muted-foreground">
             {icons.map((icon, index) => (
-              <div key={index}>{icon}</div>
+               <div key={index} className={cn('transition-opacity duration-300', currentIconIndex === index ? 'opacity-100' : 'opacity-25')}>
+                {icon}
+               </div>
             ))}
           </div>
         </div>
