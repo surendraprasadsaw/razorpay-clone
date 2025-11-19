@@ -7,6 +7,7 @@ import { ClientLogos } from '@/components/landing/ClientLogos';
 import { InternationalPayments } from '@/components/landing/InternationalPayments';
 import { AllInOnePlatform } from '@/components/landing/AllInOnePlatform';
 import { AcceptPayments } from '@/components/landing/AcceptPayments';
+import { PoweringEveryIndustry } from '@/components/landing/PoweringEveryIndustry';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Hero />
         <ClientLogos />
         <AcceptPayments />
+        <PoweringEveryIndustry />
         <InternationalPayments />
         <AllInOnePlatform />
         <Features />
