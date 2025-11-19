@@ -1,3 +1,4 @@
+'use client';
 import { Header } from '@/components/landing/Header';
 import { Hero } from '@/components/landing/Hero';
 import { Features } from '@/components/landing/Features';
@@ -10,6 +11,7 @@ import { AcceptPayments } from '@/components/landing/AcceptPayments';
 import { PoweringEveryIndustry } from '@/components/landing/PoweringEveryIndustry';
 import { Disruption } from '@/components/landing/Disruption';
 import { Testimonials } from '@/components/landing/Testimonials';
+import { CtaSection } from '@/components/landing/CtaSection';
 
 export default function Home() {
   return (
@@ -26,6 +28,7 @@ export default function Home() {
         <AllInOnePlatform />
         <Features />
         <FaqSection />
+        <CtaSection />
       </main>
       <Footer />
     </div>
