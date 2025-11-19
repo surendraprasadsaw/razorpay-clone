@@ -4,6 +4,8 @@ import { Features } from '@/components/landing/Features';
 import { FaqSection } from '@/components/landing/FaqSection';
 import { Footer } from '@/components/landing/Footer';
 import { ClientLogos } from '@/components/landing/ClientLogos';
+import { InternationalPayments } from '@/components/landing/InternationalPayments';
+import { AllInOnePlatform } from '@/components/landing/AllInOnePlatform';
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
       <main className="flex-grow">
         <Hero />
         <ClientLogos />
+        <InternationalPayments />
+        <AllInOnePlatform />
         <Features />
         <FaqSection />
       </main>
