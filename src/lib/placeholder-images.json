@@ -65,6 +65,30 @@
       "description": "Globe with money for international payments section",
       "imageUrl": "https://images.unsplash.com/photo-1614028674022-3c811738722a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxnb2xkZW4lMjBnbG9iZSUyMG1vbmV5fGVufDB8fHx8MTc2NTM2MjczMXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "golden globe money"
+    },
+    {
+      "id": "payment-gateway",
+      "description": "Abstract image representing a payment gateway interface",
+      "imageUrl": "https://images.unsplash.com/photo-1696204568132-709559a463c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx1aSUyMHBheW1lbnR8ZW58MHx8fHwxNzY1NDYwMTk0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ui payment"
+    },
+    {
+      "id": "payment-button",
+      "description": "A close-up of a houseplant in a nice pot.",
+      "imageUrl": "https://images.unsplash.com/photo-1592205869273-ab3c829f0061?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwaWxlYSUyMHBsYW50fGVufDB8fHx8MTc2NTQ2MDIxOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pilea plant"
+    },
+    {
+      "id": "payment-links",
+      "description": "A woman smiling while looking at her phone.",
+      "imageUrl": "https://images.unsplash.com/photo-1615232857429-7721d643d838?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21hbiUyMG9uJTIwcGhvbmUlMjBzbWlsaW5nfGVufDB8fHx8MTc2NTQ2MDIxOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman phone smiling"
+    },
+    {
+      "id": "razorpay-pos",
+      "description": "A hand holding a point-of-sale (POS) terminal.",
+      "imageUrl": "https://images.unsplash.com/photo-1643697444586-a36c641d4013?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwb3MlMjB0ZXJtaW5hbHxlbnwwfHx8fDE3NjU0NjAyMTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pos terminal"
     }
   ]
 }
