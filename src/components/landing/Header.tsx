@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Logo } from '@/components/Logo';
 import { AuthButton } from '@/components/auth/AuthButton';
 import { Button } from '../ui/button';
+import { InternationalPaymentsBanner } from './InternationalPaymentsBanner';
 
 export function Header() {
   const navLinks = [
@@ -39,6 +40,7 @@ export function Header() {
           <AuthButton />
         </div>
       </div>
+      <InternationalPaymentsBanner />
     </header>
   );
 }
