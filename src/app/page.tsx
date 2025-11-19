@@ -8,6 +8,7 @@ import { InternationalPayments } from '@/components/landing/InternationalPayment
 import { AllInOnePlatform } from '@/components/landing/AllInOnePlatform';
 import { AcceptPayments } from '@/components/landing/AcceptPayments';
 import { PoweringEveryIndustry } from '@/components/landing/PoweringEveryIndustry';
+import { Disruption } from '@/components/landing/Disruption';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <ClientLogos />
         <AcceptPayments />
         <PoweringEveryIndustry />
+        <Disruption />
         <InternationalPayments />
         <AllInOnePlatform />
         <Features />
