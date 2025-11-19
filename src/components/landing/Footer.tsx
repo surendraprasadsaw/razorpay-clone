@@ -11,7 +11,7 @@ export function Footer() {
           </p>
         </div>
         <p className="text-center text-sm text-muted-foreground md:text-left">
-          &copy; {new Date().getFullYear()} PayFlow Inc. All rights reserved.
+          &copy; {new Date().getFullYear()} Razor Pay Inc. All rights reserved.
         </p>
       </div>
     </footer>

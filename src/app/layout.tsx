@@ -4,7 +4,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { AuthProvider } from '@/context/AuthContext';
 
 export const metadata: Metadata = {
-  title: 'PayFlow',
+  title: 'Razor Pay',
   description: 'A modern, responsive payment solution integrated with Razorpay.',
 };
 

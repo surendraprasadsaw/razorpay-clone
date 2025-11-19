@@ -10,7 +10,7 @@ export function Hero() {
         <main className="text-5xl md:text-6xl font-bold">
           <h1 className="inline">
             <span className="inline bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text">
-              PayFlow
+              Razor Pay
             </span>
             , Powering
           </h1>{" "}
@@ -38,7 +38,7 @@ export function Hero() {
           <div className="relative bg-card/60 backdrop-blur-lg p-8 rounded-2xl shadow-2xl border">
             <h3 className="text-2xl font-bold mb-4">The Complete Payment Solution</h3>
             <p className="text-muted-foreground mb-6">
-              From startups to large enterprises, PayFlow provides a robust suite of tools to accept payments, manage subscriptions, and automate payouts.
+              From startups to large enterprises, Razor Pay provides a robust suite of tools to accept payments, manage subscriptions, and automate payouts.
             </p>
             <div className="flex justify-between items-center bg-muted p-4 rounded-lg">
               <div className="text-sm">

@@ -25,7 +25,7 @@ export function Features() {
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold">
-            Why Choose PayFlow?
+            Why Choose Razor Pay?
           </h2>
           <p className="text-lg text-muted-foreground mt-4">
             We provide everything you need to manage payments, so you can focus on growing your business.

@@ -58,7 +58,7 @@ export function PaymentButton({ amount, user }: { amount: number, user: User }) 
       key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID!,
       amount: order.amount,
       currency: order.currency,
-      name: 'PayFlow',
+      name: 'Razor Pay',
       description: 'Test Transaction',
       order_id: order.id,
       handler: async function (response: any) {
@@ -91,7 +91,7 @@ export function PaymentButton({ amount, user }: { amount: number, user: User }) 
         contact: user.phoneNumber || '9999999999',
       },
       notes: {
-        address: 'PayFlow Corporate Office',
+        address: 'Razor Pay Corporate Office',
       },
       theme: {
         color: '#3F51B5',

@@ -26,7 +26,7 @@ export async function FaqSection() {
         Frequently Asked Questions
       </h2>
       <p className="text-center text-muted-foreground mb-8">
-        Find answers to common questions about PayFlow.
+        Find answers to common questions about Razor Pay.
       </p>
 
       {faqs.length > 0 ? (
