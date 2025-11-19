@@ -23,6 +23,42 @@
       "description": "Icon-like image for global reach",
       "imageUrl": "https://images.unsplash.com/photo-1626695436755-3e288720849c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxnbG9iZSUyMHdvcmxkfGVufDB8fHx8MTc2MzU1NzA0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "globe world"
+    },
+    {
+      "id": "hero-carousel-1",
+      "description": "Portrait of a founder for a carousel slide",
+      "imageUrl": "https://images.unsplash.com/photo-1659353221237-6a1cfb73fd90?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWxlJTIwZm91bmRlcnxlbnwwfHx8fDE3NjM1NTc3Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male founder"
+    },
+    {
+      "id": "hero-carousel-2",
+      "description": "Portrait of a CEO for a carousel slide",
+      "imageUrl": "https://images.unsplash.com/photo-1600275669439-14e40452d20b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmZW1hbGUlMjBjZW98ZW58MHx8fHwxNzYzNTU3NzM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "female ceo"
+    },
+    {
+      "id": "hero-carousel-3",
+      "description": "Portrait of a founder for a carousel slide",
+      "imageUrl": "https://images.unsplash.com/photo-1600878459108-617a253537e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWxlJTIwZW50cmVwcmVuZXVyfGVufDB8fHx8MTc2MzU1NzczN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male entrepreneur"
+    },
+    {
+      "id": "hero-card-1",
+      "description": "UI card for current account",
+      "imageUrl": "https://images.unsplash.com/photo-1742997734865-71d10c491be5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx1aSUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NjM1NTc3Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ui dashboard"
+    },
+    {
+      "id": "hero-card-2",
+      "description": "UI card for payroll",
+      "imageUrl": "https://images.unsplash.com/photo-1643455464171-aaaaa1042fc8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwYXlyb2xsJTIwaW50ZXJmYWNlfGVufDB8fHx8MTc2MzU1NzczN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "payroll interface"
+    },
+    {
+      "id": "hero-card-3",
+      "description": "UI card for global payments",
+      "imageUrl": "https://images.unsplash.com/photo-1615775036480-f0cff4e2ff6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwYXltZW50cyUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NjM1NTc3Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "payments dashboard"
     }
   ]
 }

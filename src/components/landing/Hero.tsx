@@ -1,80 +1,147 @@
 'use client';
 
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import Image from 'next/image';
+import {
+  ArrowRight,
+  CreditCard,
+  Send,
+  Building,
+  BadgePercent,
+  FileText,
+  Search,
+} from 'lucide-react';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Hero() {
+  const heroSlides = [
+    {
+      id: 1,
+      title: "Effortless Banking for India's boldest disruptors",
+      tags: ['Powerful Automation', 'Smart Dashboard', 'Integrated Access'],
+      image: PlaceHolderImages.find(p => p.id === 'hero-carousel-1'),
+      cardImage: PlaceHolderImages.find(p => p.id === 'hero-card-1'),
+      personName: 'Abhishek',
+      personTitle: 'MYGATE FOUNDER',
+    },
+    {
+      id: 2,
+      title: 'Seamless Payroll for modern businesses',
+      tags: ['Automated Compliance', 'Simple & Powerful', 'Happy Employees'],
+      image: PlaceHolderImages.find(p => p.id === 'hero-carousel-2'),
+      cardImage: PlaceHolderImages.find(p => p.id === 'hero-card-2'),
+      personName: 'Jane Doe',
+      personTitle: 'CEO, STARTUP INC.',
+    },
+    {
+      id: 3,
+      title: 'Global Payments, Simplified for you',
+      tags: ['100+ Currencies', 'Low Fees', 'Easy Integration'],
+      image: PlaceHolderImages.find(p => p.id === 'hero-carousel-3'),
+      cardImage: PlaceHolderImages.find(p => p.id === 'hero-card-3'),
+      personName: 'John Smith',
+      personTitle: 'FOUNDER, E-COM GLOBAL',
+    },
+  ];
+
+  const products = [
+    { name: 'Accept Payments', icon: <CreditCard className="w-4 h-4 mr-2" /> },
+    { name: 'Make Payouts', icon: <Send className="w-4 h-4 mr-2" /> },
+    { name: 'Start Business Banking', icon: <Building className="w-4 h-4 mr-2" /> },
+    { name: 'Get Credit', icon: <BadgePercent className="w-4 h-4 mr-2" /> },
+    { name: 'Automate Payroll', icon: <FileText className="w-4 h-4 mr-2" /> },
+    { name: 'Something else?', icon: <Search className="w-4 h-4 mr-2" /> },
+  ];
+
   return (
-    <section className="container grid lg:grid-cols-2 place-items-center py-20 md:py-32 gap-10">
-      <div className="text-center lg:text-start space-y-6">
-        <main className="text-5xl md:text-6xl font-bold">
-          <h1 className="inline">
-            <span className="inline bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text">
-              Razor Pay
-            </span>
-            , Powering
-          </h1>{" "}
-          Online Payments
-        </main>
-
-        <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
-          Experience the future of payments. We offer a seamless, secure, and developer-friendly platform to handle all your transaction needs.
-        </p>
-
-        <div className="space-y-4 md:space-y-0 md:space-x-4">
-          <Link href="/signup">
-            <Button className="w-full md:w-1/3" style={{ backgroundColor: 'hsl(var(--accent))', color: 'hsl(var(--accent-foreground))' }}>
-              Get Started
-            </Button>
-          </Link>
-        </div>
-      </div>
-
-      <div className="z-10">
-        <div className="relative w-full max-w-lg">
-          <div className="absolute top-0 -left-4 w-72 h-72 bg-primary/20 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-          <div className="absolute top-0 -right-4 w-72 h-72 bg-accent/20 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-secondary/20 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
-          <div className="relative bg-card/60 backdrop-blur-lg p-8 rounded-2xl shadow-2xl border">
-            <h3 className="text-2xl font-bold mb-4">The Complete Payment Solution</h3>
-            <p className="text-muted-foreground mb-6">
-              From startups to large enterprises, Razor Pay provides a robust suite of tools to accept payments, manage subscriptions, and automate payouts.
-            </p>
-            <div className="flex justify-between items-center bg-muted p-4 rounded-lg">
-              <div className="text-sm">
-                <p>Accepting Payments</p>
-                <p className="text-lg font-bold">₹100.00</p>
+    <section className="relative bg-background overflow-hidden">
+      <Carousel
+        opts={{
+          loop: true,
+        }}
+        className="w-full"
+      >
+        <CarouselContent>
+          {heroSlides.map((slide) => (
+            <CarouselItem key={slide.id}>
+              <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="grid lg:grid-cols-2 gap-10 items-center py-20 md:py-24">
+                  <div className="text-center lg:text-left space-y-6">
+                    <h1 className="text-4xl md:text-5xl font-bold text-foreground">
+                      {slide.title}
+                    </h1>
+                    <p className="text-lg text-muted-foreground">
+                      {slide.tags.join(' | ')}
+                    </p>
+                    <div className="flex items-center justify-center lg:justify-start space-x-4">
+                      <Button size="lg" asChild style={{ backgroundColor: 'hsl(var(--primary))', color: 'hsl(var(--primary-foreground))' }}>
+                        <Link href="/signup">
+                          Sign Up Now <ArrowRight className="ml-2 w-4 h-4" />
+                        </Link>
+                      </Button>
+                      <Button size="lg" variant="link" asChild>
+                        <Link href="#">Know More</Link>
+                      </Button>
+                    </div>
+                  </div>
+                  <div className="relative h-[400px] lg:h-[500px] flex items-center justify-center">
+                     <div className="absolute inset-0 bg-primary/10 -skew-y-6 transform-gpu rounded-3xl"></div>
+                      {slide.image && (
+                        <Image
+                          src={slide.image.imageUrl}
+                          alt={slide.personName}
+                          width={300}
+                          height={450}
+                          className="relative z-10 object-cover rounded-md"
+                          data-ai-hint={slide.image.imageHint}
+                        />
+                      )}
+                      {slide.cardImage && (
+                        <div className="absolute z-20 bottom-0 right-0 lg:-right-10 w-64">
+                           <Image
+                            src={slide.cardImage.imageUrl}
+                            alt={`${slide.personName}'s company card`}
+                            width={260}
+                            height={320}
+                            className="rounded-lg shadow-2xl"
+                            data-ai-hint={slide.cardImage.imageHint}
+                          />
+                           <div className="absolute bottom-4 left-4 text-white">
+                            <p className="text-xs uppercase">{slide.personTitle}</p>
+                            <p className="text-4xl font-bold font-serif">{slide.personName}</p>
+                          </div>
+                        </div>
+                      )}
+                  </div>
+                </div>
               </div>
-              <Button size="sm">Pay Now</Button>
-            </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-30 hidden lg:flex" />
+        <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-30 hidden lg:flex" />
+      </Carousel>
+      <div className="bg-secondary/50 border-t border-border">
+         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <span className="text-muted-foreground mr-4 hidden md:inline">Looking for a product?</span>
+             {products.map((product) => (
+              <Button key={product.name} variant="ghost" className="text-muted-foreground hover:text-foreground">
+                {product.icon}
+                {product.name}
+              </Button>
+            ))}
           </div>
         </div>
       </div>
-      <style jsx>{`
-        .animate-blob {
-          animation: blob 7s infinite;
-        }
-        .animation-delay-2000 {
-          animation-delay: 2s;
-        }
-        .animation-delay-4000 {
-          animation-delay: 4s;
-        }
-        @keyframes blob {
-          0% {
-            transform: translate(0px, 0px) scale(1);
-          }
-          33% {
-            transform: translate(30px, -50px) scale(1.1);
-          }
-          66% {
-            transform: translate(-20px, 20px) scale(0.9);
-          }
-          100% {
-            transform: translate(0px, 0px) scale(1);
-          }
-        }
-      `}</style>
     </section>
   );
 }
