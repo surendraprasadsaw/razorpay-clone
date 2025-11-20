@@ -78,7 +78,7 @@ export function AcceptPayments() {
       badge: 'NO CODE',
       actions: (
         <div className="flex items-center space-x-2">
-          <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
+          <Button asChild>
              <Link href="/signup">
                 Sign up Now <ArrowRight className="ml-2 w-4 h-4" />
              </Link>
@@ -171,9 +171,9 @@ export function AcceptPayments() {
                           </p>
                       </div>
                     ) : (
-                      <div className="p-4 flex-grow flex flex-col">
+                      <div className="p-4 flex-grow flex flex-col justify-center">
                         <h3 className="text-lg font-bold mb-1">{product.title}</h3>
-                        <p className="text-muted-foreground text-xs mb-3 flex-grow">
+                        <p className="text-muted-foreground text-xs mb-3 flex-grow-0">
                           {product.description}
                         </p>
                         {product.actions ? product.actions : (
