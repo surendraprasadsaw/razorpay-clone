@@ -15,10 +15,14 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export function AcceptPayments() {
   const [activeTab, setActiveTab] = useState('Top Products');
+
+  useEffect(() => {
+    // This hook is to prevent hydration errors with state.
+  }, []);
 
   const tabs = [
     'Top Products',
@@ -49,6 +53,7 @@ export function AcceptPayments() {
       description: 'Offer a seamless payment experience on your website or app',
       image: PlaceHolderImages.find((p) => p.id === 'payment-gateway'),
       content: (
+        <>
         <div className="p-4 space-y-3">
           {paymentMethods.map((method) => (
             <div
@@ -66,8 +71,9 @@ export function AcceptPayments() {
               </div>
               <ChevronRight className="w-5 h-5 text-muted-foreground" />
             </div>
-          ),
+          ))}
         </div>
+        </>
       ),
     },
     {
@@ -78,11 +84,11 @@ export function AcceptPayments() {
       badge: 'NO CODE',
       actions: (
         <div className="flex items-center space-x-2">
-          <Link href="/signup">
-             <Button>
+          <Button asChild>
+             <Link href="/signup">
                 Sign up Now <ArrowRight className="ml-2 w-4 h-4" />
-             </Button>
-          </Link>
+             </Link>
+          </Button>
           <Button variant="link">Know More</Button>
         </div>
       ),
@@ -130,11 +136,11 @@ export function AcceptPayments() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
             {products.map((product) => (
               <Card
                 key={product.id}
-                className="overflow-hidden flex flex-col group"
+                className="overflow-hidden flex flex-col group h-full"
               >
                 <CardContent className="p-0 flex-grow flex flex-col">
                   <div className="bg-muted/40 p-4 min-h-[200px] relative flex items-center justify-center">
