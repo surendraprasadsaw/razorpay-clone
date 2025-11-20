@@ -8,7 +8,7 @@
  */
 
 import {ai} from '@/ai/genkit';
-import {z} from 'genkit';
+import {z} from 'zod';
 
 const FaqInputSchema = z.object({
   topic: z
@@ -43,14 +43,16 @@ const paymentFaqsPrompt = ai.definePrompt({
 `,
 });
 
+async function generatePaymentFaqsRunner(input: FaqInput) {
+  const {output} = await paymentFaqsPrompt(input);
+  return output!;
+}
+
 const generatePaymentFaqsFlow = ai.defineFlow(
   {
     name: 'generatePaymentFaqsFlow',
     inputSchema: FaqInputSchema,
     outputSchema: FaqOutputSchema,
   },
-  async input => {
-    const {output} = await paymentFaqsPrompt(input);
-    return output!;
-  }
+  generatePaymentFaqsRunner
 );
