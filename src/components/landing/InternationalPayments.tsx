@@ -4,12 +4,13 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import Link from 'next/link';
 
 export function InternationalPayments() {
   const image = PlaceHolderImages.find(p => p.id === 'international-payments');
 
   return (
-    <div className="container py-12">
+    <div className="container py-20">
       <div className="relative rounded-2xl overflow-hidden">
         {image && (
           <Image
@@ -28,8 +29,8 @@ export function InternationalPayments() {
             Go global today!
           </h2>
           <div className="mt-8">
-            <Button size="lg" variant="secondary">
-              Accept International Payments
+            <Button size="lg" variant="secondary" asChild>
+              <Link href="#">Accept International Payments</Link>
             </Button>
           </div>
         </div>

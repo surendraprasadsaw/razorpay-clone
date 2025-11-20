@@ -1,7 +1,9 @@
+
 'use client';
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   ArrowRight,
   ChevronRight,
@@ -76,8 +78,10 @@ export function AcceptPayments() {
       badge: 'NO CODE',
       actions: (
         <div className="flex items-center space-x-2">
-          <Button>
-            Sign up Now <ArrowRight className="ml-2 w-4 h-4" />
+          <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
+             <Link href="/signup">
+                Sign up Now <ArrowRight className="ml-2 w-4 h-4" />
+             </Link>
           </Button>
           <Button variant="link">Know More</Button>
         </div>
@@ -101,7 +105,7 @@ export function AcceptPayments() {
 
   return (
     <section className="py-20 bg-secondary/30">
-      <div className="container max-w-screen-lg mx-auto p-8 border rounded-lg bg-card">
+      <div className="container p-8 border rounded-lg bg-card">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold">Accept Payments</h2>
         </div>

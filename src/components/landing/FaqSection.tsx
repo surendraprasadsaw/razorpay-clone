@@ -21,7 +21,7 @@ export async function FaqSection() {
   }).filter(faq => faq.question && faq.answer);
 
   return (
-    <section id="faq" className="container py-24 sm:py-32">
+    <section id="faq" className="container py-20">
       <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
         Frequently Asked Questions
       </h2>

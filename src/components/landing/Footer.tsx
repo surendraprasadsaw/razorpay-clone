@@ -197,7 +197,7 @@ const linkColumns4 = [
 export function Footer() {
   return (
     <footer className="bg-background text-foreground border-t">
-      <div className="container py-12">
+      <div className="container py-20">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           <div className="md:col-span-3">
             <Logo />
