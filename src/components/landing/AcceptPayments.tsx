@@ -105,87 +105,89 @@ export function AcceptPayments() {
 
   return (
     <section className="py-20 bg-secondary/30">
-      <div className="container p-8 border rounded-lg bg-card">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold">Accept Payments</h2>
-        </div>
-
-        <div className="border-b mb-8 overflow-x-auto">
-          <div className="flex space-x-8 whitespace-nowrap">
-            {tabs.map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={cn(
-                  'pb-3 border-b-2 text-muted-foreground',
-                  activeTab === tab
-                    ? 'border-accent text-accent'
-                    : 'border-transparent'
-                )}
-              >
-                {tab}
-              </button>
-            ))}
+      <div className="container">
+        <div className="p-8 border rounded-lg bg-card">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold">Accept Payments</h2>
           </div>
-        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {products.map((product) => (
-            <Card
-              key={product.id}
-              className="overflow-hidden flex flex-col group"
-            >
-              <CardContent className="p-0 flex-grow flex flex-col">
-                <div className="bg-muted/40 p-4 min-h-[200px] relative flex items-center justify-center">
-                  {product.image && (
-                    <Image
-                      src={product.image.imageUrl}
-                      alt={product.title}
-                      width={product.id === 'razorpay-pos' ? 120 : 200}
-                      height={150}
-                      className={cn(
-                        'object-contain transition-transform duration-300 group-hover:scale-105',
-                         product.id === 'razorpay-pos' ? "w-[120px]" : "w-auto"
-                      )}
-                       data-ai-hint={product.image.imageHint}
-                    />
+          <div className="border-b mb-8 overflow-x-auto">
+            <div className="flex space-x-8 whitespace-nowrap">
+              {tabs.map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={cn(
+                    'pb-3 border-b-2 text-muted-foreground',
+                    activeTab === tab
+                      ? 'border-accent text-accent'
+                      : 'border-transparent'
                   )}
-                  {product.badge && (
-                    <div className="absolute top-2 right-2 bg-background/80 backdrop-blur-sm px-2 py-1 rounded-md text-xs font-semibold">
-                      {product.badge}
-                    </div>
-                  )}
-                   {product.id === 'razorpay-pos' && (
-                     <Button variant="secondary" size="icon" className="absolute right-2 bottom-2 rounded-full h-8 w-8 opacity-0 group-hover:opacity-100 transition-opacity">
-                       <ChevronRight className='w-4 h-4' />
-                     </Button>
-                   )}
-                </div>
-                 <div className="flex flex-col flex-grow">
-                  {product.content ? (
-                     <div className="p-4 border-t mt-auto">
+                >
+                  {tab}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {products.map((product) => (
+              <Card
+                key={product.id}
+                className="overflow-hidden flex flex-col group"
+              >
+                <CardContent className="p-0 flex-grow flex flex-col">
+                  <div className="bg-muted/40 p-4 min-h-[200px] relative flex items-center justify-center">
+                    {product.image && (
+                      <Image
+                        src={product.image.imageUrl}
+                        alt={product.title}
+                        width={product.id === 'razorpay-pos' ? 120 : 200}
+                        height={150}
+                        className={cn(
+                          'object-contain transition-transform duration-300 group-hover:scale-105',
+                          product.id === 'razorpay-pos' ? "w-[120px]" : "w-auto"
+                        )}
+                        data-ai-hint={product.image.imageHint}
+                      />
+                    )}
+                    {product.badge && (
+                      <div className="absolute top-2 right-2 bg-background/80 backdrop-blur-sm px-2 py-1 rounded-md text-xs font-semibold">
+                        {product.badge}
+                      </div>
+                    )}
+                    {product.id === 'razorpay-pos' && (
+                      <Button variant="secondary" size="icon" className="absolute right-2 bottom-2 rounded-full h-8 w-8 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <ChevronRight className='w-4 h-4' />
+                      </Button>
+                    )}
+                  </div>
+                  <div className="flex flex-col flex-grow">
+                    {product.content ? (
+                      <div className="p-4 border-t mt-auto">
+                          <h3 className="text-lg font-bold mb-1">{product.title}</h3>
+                          <p className="text-muted-foreground text-xs">
+                            {product.description}
+                          </p>
+                      </div>
+                    ) : (
+                      <div className="p-4 flex-grow flex flex-col">
                         <h3 className="text-lg font-bold mb-1">{product.title}</h3>
-                        <p className="text-muted-foreground text-xs">
+                        <p className="text-muted-foreground text-xs mb-3 flex-grow">
                           {product.description}
                         </p>
-                    </div>
-                  ) : (
-                    <div className="p-4 flex-grow flex flex-col">
-                      <h3 className="text-lg font-bold mb-1">{product.title}</h3>
-                      <p className="text-muted-foreground text-xs mb-3 flex-grow">
-                        {product.description}
-                      </p>
-                      {product.actions ? product.actions : (
-                        <Button variant="link" className="p-0 h-auto justify-start text-primary">
-                          Know More <ArrowRight className="ml-1 w-3 h-3" />
-                        </Button>
-                      )}
-                    </div>
-                  )}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+                        {product.actions ? product.actions : (
+                          <Button variant="link" className="p-0 h-auto justify-start text-primary">
+                            Know More <ArrowRight className="ml-1 w-3 h-3" />
+                          </Button>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </section>

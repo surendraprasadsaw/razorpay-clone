@@ -1,3 +1,4 @@
+
 'use client';
 
 import { cn } from '@/lib/utils';
@@ -63,7 +64,7 @@ const logos = [
 
 export function ClientLogos() {
   return (
-    <div className="relative w-full py-12 bg-background overflow-hidden">
+    <div className="relative w-full py-20 bg-background overflow-hidden">
       <div className="text-center mb-8">
         <h3 className="text-sm font-semibold uppercase text-muted-foreground tracking-wider">
           Trusted by the best companies in India
