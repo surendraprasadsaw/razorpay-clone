@@ -21,8 +21,6 @@ export function AcceptPayments() {
   const [activeTab, setActiveTab] = useState('');
 
   useEffect(() => {
-    // This hook is to prevent hydration errors with state.
-    // Initialize state on the client side.
     setActiveTab('Top Products');
   }, []);
 

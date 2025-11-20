@@ -23,6 +23,8 @@ import Link from 'next/link';
 
 export function PoweringEveryIndustry() {
   const [activeTab, setActiveTab] = useState('');
+  const [currentIconIndex, setCurrentIconIndex] = useState(0);
+
   const image = PlaceHolderImages.find((p) => p.id === 'powering-ecommerce');
 
   const industries = [
@@ -56,18 +58,13 @@ export function PoweringEveryIndustry() {
     <ShoppingBagIcon key="shopping" className="w-6 h-6" />,
   ];
 
-  const [currentIconIndex, setCurrentIconIndex] = useState(0);
-
   useEffect(() => {
-    // This hook is to prevent hydration errors with state.
-    // Initialize state on the client side.
     setActiveTab('E-Commerce');
-    
     const interval = setInterval(() => {
       setCurrentIconIndex((prevIndex) => (prevIndex + 1) % icons.length);
     }, 1500);
     return () => clearInterval(interval);
-  }, [icons.length]);
+  }, []); // icons.length is constant, so we can remove it from dependencies.
 
 
   const clientLogos = [
@@ -162,7 +159,7 @@ export function PoweringEveryIndustry() {
             .filter((i) => i.name !== 'E-Commerce')
             .map((industry) => (
               <TabsContent key={industry.name} value={industry.name}>
-                <div className="text-center py-20 border rounded-lg">
+                <div className="text-center py-20 border rounded-lg flex flex-col justify-center items-center min-h-[500px]">
                   <h3 className="text-2xl font-semibold">
                     Content for {industry.name}
                   </h3>
