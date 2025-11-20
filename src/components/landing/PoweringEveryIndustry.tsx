@@ -64,7 +64,7 @@ export function PoweringEveryIndustry() {
       setCurrentIconIndex((prevIndex) => (prevIndex + 1) % icons.length);
     }, 1500);
     return () => clearInterval(interval);
-  }, []); // icons.length is constant, so we can remove it from dependencies.
+  }, [icons.length]);
 
 
   const clientLogos = [
@@ -88,17 +88,17 @@ export function PoweringEveryIndustry() {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-12 md:py-20 bg-background">
       <div className="container">
-        <div className="flex justify-between items-start mb-12">
+        <div className="md:flex justify-between items-start mb-12 text-center md:text-left">
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+            <h2 className="text-3xl md:text-5xl font-bold leading-tight">
               Powering every industry.
-              <br />
+              <br className="hidden md:block" />
               Powering all disruptors.
             </h2>
           </div>
-          <div className="hidden md:flex items-center space-x-6 text-muted-foreground">
+          <div className="hidden md:flex items-center space-x-6 text-muted-foreground mt-4 md:mt-0">
             {icons.map((icon, index) => (
                <div key={index} className={cn('transition-opacity duration-300', currentIconIndex === index ? 'opacity-100' : 'opacity-25')}>
                 {icon}
@@ -108,9 +108,9 @@ export function PoweringEveryIndustry() {
         </div>
 
         <Tabs value={activeTab} onValueChange={setActiveTab}>
-          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-5 mb-8">
+          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-5 mb-8 h-auto">
             {industries.map((industry) => (
-              <TabsTrigger key={industry.name} value={industry.name}>
+              <TabsTrigger key={industry.name} value={industry.name} className="flex-col sm:flex-row h-12">
                 {industry.icon}
                 {industry.name}
               </TabsTrigger>
@@ -130,16 +130,16 @@ export function PoweringEveryIndustry() {
               <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent" />
 
               <div className="relative z-10 p-8 md:p-12 max-w-lg text-white">
-                <h3 className="text-4xl font-bold mb-4">
+                <h3 className="text-3xl md:text-4xl font-bold mb-4">
                   Empower your <br />
                   <span className="text-accent">e-commerce business</span>
                 </h3>
-                <p className="text-lg text-gray-300 mb-8">
+                <p className="text-base md:text-lg text-gray-300 mb-8">
                   Streamline payment management with a unified dashboard,
                   enabling both online and in-person payment collection while
                   enhancing conversion rates and minimizing fraud.
                 </p>
-                <div className="flex items-center space-x-6 mb-8 text-gray-300">
+                <div className="flex flex-wrap items-center gap-x-6 gap-y-4 mb-8 text-gray-300">
                   {clientLogos.map((client) => (
                     <div key={client.name} className="h-6 flex items-center">
                       {client.logo}

@@ -5,8 +5,13 @@ import { Logo } from '@/components/Logo';
 import { AuthButton } from '@/components/auth/AuthButton';
 import { Button } from '../ui/button';
 import { InternationalPaymentsBanner } from './InternationalPaymentsBanner';
+import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
+import { Menu } from 'lucide-react';
+import { useState } from 'react';
 
 export function Header() {
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
+
   const navLinks = [
     { name: 'Payments', href: '#' },
     { name: 'Banking+', href: '#' },
@@ -20,7 +25,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
-        <div className="mr-8 flex items-center">
+        <div className="mr-4 flex items-center">
           <Link href="/" className="flex items-center space-x-2">
             <Logo />
           </Link>
@@ -37,7 +42,39 @@ export function Header() {
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-2">
-          <AuthButton />
+          <div className="hidden md:flex">
+            <AuthButton />
+          </div>
+          <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className="md:hidden">
+                <Menu className="h-5 w-5" />
+                <span className="sr-only">Toggle Menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="left">
+              <div className="p-4">
+                <Link href="/" className="mb-8 block" onClick={() => setIsSheetOpen(false)}>
+                  <Logo />
+                </Link>
+                <nav className="flex flex-col space-y-4">
+                  {navLinks.map(link => (
+                    <Link
+                      key={link.name}
+                      href={link.href}
+                      onClick={() => setIsSheetOpen(false)}
+                      className="text-lg font-medium transition-colors hover:text-foreground/80 text-foreground/60"
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                </nav>
+                <div className="mt-8 border-t pt-6">
+                  <AuthButton />
+                </div>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
       <InternationalPaymentsBanner />

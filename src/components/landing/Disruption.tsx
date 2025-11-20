@@ -19,7 +19,7 @@ import Link from 'next/link';
 
 export function Disruption() {
   return (
-    <section className="py-20">
+    <section className="py-12 md:py-20">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold max-w-2xl mx-auto">
@@ -29,11 +29,11 @@ export function Disruption() {
         <div className="grid md:grid-cols-2 gap-8 items-stretch">
           <Card className="flex flex-col text-center">
             <CardHeader className="flex flex-row items-center justify-between">
-              <span className="font-semibold">MoneySaver Export Account</span>
+              <span className="font-semibold text-left">MoneySaver Export Account</span>
               <Globe className="w-5 h-5 text-muted-foreground" />
             </CardHeader>
             <CardContent className="flex-grow flex flex-col justify-center">
-              <h3 className="text-3xl font-bold text-primary mb-4">
+              <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                 Open a virtual account in 200+ countries, save up to 50% on
                 international bank transfer charges. Receive
                 ACH/SWIFT/SEPA/BACS payments
@@ -43,7 +43,7 @@ export function Disruption() {
                 account
               </p>
             </CardContent>
-            <CardFooter className="justify-center">
+            <CardFooter className="justify-center flex-wrap gap-2">
               <Button asChild>
                 <Link href="/signup">
                   Sign Up <ArrowRight className="ml-2 w-4 h-4" />
@@ -57,7 +57,7 @@ export function Disruption() {
 
           <Card className="flex flex-col relative overflow-hidden text-center">
             <CardHeader className="flex flex-row items-center justify-between">
-              <span className="font-semibold">Turbo UPI</span>
+              <span className="font-semibold text-left">Turbo UPI</span>
               <ChevronsRight className="w-5 h-5 text-muted-foreground" />
             </CardHeader>
             <CardContent className="flex-grow flex flex-col justify-center">
@@ -70,7 +70,7 @@ export function Disruption() {
                 businesses
               </p>
             </CardContent>
-            <CardFooter className="justify-center">
+            <CardFooter className="justify-center flex-wrap gap-2">
               <Button asChild>
                 <Link href="/signup">
                   Sign Up <ArrowRight className="ml-2 w-4 h-4" />
@@ -80,7 +80,7 @@ export function Disruption() {
                 <Link href="#">Know More</Link>
               </Button>
             </CardFooter>
-            <div className="absolute right-4 top-1/2 -translate-y-1/2">
+            <div className="absolute right-4 top-1/2 -translate-y-1/2 hidden md:block">
                <Button
                 variant="default"
                 size="icon"

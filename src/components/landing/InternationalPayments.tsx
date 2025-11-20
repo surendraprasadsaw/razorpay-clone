@@ -10,7 +10,7 @@ export function InternationalPayments() {
   const image = PlaceHolderImages.find(p => p.id === 'international-payments');
 
   return (
-    <div className="container py-20">
+    <div className="container py-12 md:py-20">
       <div className="relative rounded-2xl overflow-hidden">
         {image && (
           <Image
@@ -22,10 +22,10 @@ export function InternationalPayments() {
           />
         )}
         <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 text-white text-center p-12 md:p-24">
-          <h2 className="text-4xl md:text-5xl font-bold">
+        <div className="relative z-10 text-white text-center p-8 md:p-24">
+          <h2 className="text-3xl md:text-5xl font-bold">
             Accept payments in 130+ currencies.
-            <br />
+            <br className="hidden sm:block" />
             Go global today!
           </h2>
           <div className="mt-8">

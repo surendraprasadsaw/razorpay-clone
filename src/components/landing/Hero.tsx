@@ -70,7 +70,7 @@ export function Hero() {
   ]);
 
   return (
-    <section className="relative bg-background overflow-hidden pt-20">
+    <section className="relative bg-background overflow-hidden pt-12 md:pt-20">
       <Carousel
         opts={{
           loop: true,
@@ -90,8 +90,8 @@ export function Hero() {
                     <p className="text-lg text-muted-foreground">
                       {slide.tags.join(' | ')}
                     </p>
-                    <div className="flex items-center justify-center lg:justify-start space-x-4">
-                      <Button size="lg" asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
+                    <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-2 sm:space-y-0 sm:space-x-4">
+                      <Button size="lg" asChild className="bg-accent text-accent-foreground hover:bg-accent/90 w-full sm:w-auto">
                         <Link href="/signup">
                           Sign Up Now <ArrowRight className="ml-2 w-4 h-4" />
                         </Link>
@@ -114,7 +114,7 @@ export function Hero() {
                         />
                       )}
                       {slide.cardImage && (
-                        <div className="absolute z-20 bottom-0 right-0 lg:-right-10 w-64">
+                        <div className="absolute z-20 bottom-0 right-0 lg:-right-10 w-64 hidden lg:block">
                            <Image
                             src={slide.cardImage.imageUrl}
                             alt={`${slide.personName}'s company card`}
@@ -140,10 +140,10 @@ export function Hero() {
       </Carousel>
       <div className="bg-secondary/50 border-t border-border">
          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
             <span className="text-muted-foreground mr-4 hidden md:inline">Looking for a product?</span>
              {products.map((product) => (
-              <Button key={product.name} variant="ghost" className="text-muted-foreground hover:text-foreground">
+              <Button key={product.name} variant="ghost" className="text-muted-foreground hover:text-foreground text-xs sm:text-sm">
                 {product.icon}
                 {product.name}
               </Button>

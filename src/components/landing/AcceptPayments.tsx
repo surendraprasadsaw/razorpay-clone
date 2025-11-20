@@ -54,25 +54,25 @@ export function AcceptPayments() {
       image: PlaceHolderImages.find((p) => p.id === 'payment-gateway'),
       content: (
         <>
-        <div className="p-4 space-y-3">
-          {paymentMethods.map((method) => (
-            <div
-              key={method.name}
-              className="flex items-center justify-between p-3 rounded-md bg-background"
-            >
-              <div className="flex items-center gap-3">
-                {method.icon}
-                <span className="font-medium">{method.name}</span>
-                {method.tag && (
-                  <span className="text-xs font-bold text-green-600 bg-green-100 px-2 py-0.5 rounded">
-                    {method.tag}
-                  </span>
-                )}
+          <div className="p-4 space-y-3">
+            {paymentMethods.map((method) => (
+              <div
+                key={method.name}
+                className="flex items-center justify-between p-3 rounded-md bg-background"
+              >
+                <div className="flex items-center gap-3">
+                  {method.icon}
+                  <span className="font-medium">{method.name}</span>
+                  {method.tag && (
+                    <span className="text-xs font-bold text-green-600 bg-green-100 px-2 py-0.5 rounded">
+                      {method.tag}
+                    </span>
+                  )}
+                </div>
+                <ChevronRight className="w-5 h-5 text-muted-foreground" />
               </div>
-              <ChevronRight className="w-5 h-5 text-muted-foreground" />
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
         </>
       ),
     },
@@ -83,7 +83,7 @@ export function AcceptPayments() {
       image: PlaceHolderImages.find((p) => p.id === 'payment-button'),
       badge: 'NO CODE',
       actions: (
-        <div className="flex items-center space-x-2">
+        <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-2">
           <Button asChild>
              <Link href="/signup">
                 Sign up Now <ArrowRight className="ml-2 w-4 h-4" />
@@ -114,21 +114,21 @@ export function AcceptPayments() {
   ];
 
   return (
-    <section className="py-20 bg-secondary/30">
+    <section className="py-12 md:py-20 bg-secondary/30">
       <div className="container">
-        <div className="p-8 border rounded-lg bg-card">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold">Accept Payments</h2>
+        <div className="p-4 md:p-8 border rounded-lg bg-card">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold">Accept Payments</h2>
           </div>
 
-          <div className="border-b mb-8 overflow-x-auto">
-            <div className="flex space-x-8 whitespace-nowrap">
+          <div className="border-b mb-8 overflow-x-auto no-scrollbar">
+            <div className="flex space-x-4 sm:space-x-8 whitespace-nowrap px-1">
               {tabs.map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
                   className={cn(
-                    'pb-3 border-b-2 text-muted-foreground',
+                    'pb-3 border-b-2 text-muted-foreground text-sm sm:text-base',
                     activeTab === tab
                       ? 'border-accent text-accent'
                       : 'border-transparent'
@@ -147,7 +147,7 @@ export function AcceptPayments() {
                 className="overflow-hidden flex flex-col group h-full text-center"
               >
                 <CardContent className="p-0 flex-grow flex flex-col">
-                  <div className="bg-muted/40 p-4 min-h-[200px] relative flex items-center justify-center">
+                  <div className="bg-muted/40 p-4 min-h-[180px] relative flex items-center justify-center">
                     {product.image && (
                       <Image
                         src={product.image.imageUrl}
@@ -174,13 +174,13 @@ export function AcceptPayments() {
                        </Button>
                     )}
                   </div>
-                  <div className="flex flex-col flex-grow p-4 items-center">
+                  <div className="flex flex-col flex-grow p-4 items-center justify-center">
                     <h3 className="text-lg font-bold mb-1">{product.title}</h3>
                     <p className="text-muted-foreground text-xs mb-3 flex-grow">
                       {product.description}
                     </p>
                     {product.actions ? (
-                      <div className="mt-auto flex justify-center">{product.actions}</div>
+                      <div className="mt-auto flex justify-center w-full">{product.actions}</div>
                     ) : product.content ? (
                       <div className="mt-auto -mx-4 -mb-4 border-t w-full">{product.content}</div>
                     ) : (
@@ -199,6 +199,15 @@ export function AcceptPayments() {
           </div>
         </div>
       </div>
+       <style jsx>{`
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
     </section>
   );
 }

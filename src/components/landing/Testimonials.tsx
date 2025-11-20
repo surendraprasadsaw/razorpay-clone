@@ -63,13 +63,13 @@ export function Testimonials() {
   ];
 
   return (
-    <section className="py-20 bg-secondary/30 overflow-hidden">
+    <section className="py-12 md:py-20 bg-secondary/30 overflow-hidden">
       <div className="container">
-        <div className="flex justify-between items-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold">
+        <div className="md:flex justify-between items-center mb-12 text-center md:text-left">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-0">
             Razorpay grows with <span className="text-primary">you!</span>
           </h2>
-          <div className="text-right">
+          <div className="text-center md:text-right">
             <p className="font-bold text-lg">1,50,000+ Businesses</p>
             <Button variant="link" className="text-primary p-0 h-auto">
               View all case studies <ArrowRight className="w-4 h-4 ml-1" />
@@ -78,7 +78,7 @@ export function Testimonials() {
         </div>
 
         <div className="relative">
-          <div className="flex gap-8 overflow-x-auto pb-8 no-scrollbar">
+          <div className="flex gap-8 overflow-x-auto pb-8 -mx-4 px-4 no-scrollbar">
             {testimonials.map((testimonial) => (
               <Card
                 key={testimonial.id}

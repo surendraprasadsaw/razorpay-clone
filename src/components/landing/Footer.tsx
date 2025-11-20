@@ -197,9 +197,9 @@ const linkColumns4 = [
 export function Footer() {
   return (
     <footer className="bg-background text-foreground border-t">
-      <div className="container py-20">
+      <div className="container py-12 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-          <div className="md:col-span-3">
+          <div className="md:col-span-12 lg:col-span-3">
             <Logo />
             <p className="text-xs text-muted-foreground mt-4">
               Razorpay is the only payments solution in India that allows
@@ -235,7 +235,7 @@ export function Footer() {
               <SocLogo />
             </div>
           </div>
-          <div className="md:col-span-2">
+          <div className="md:col-span-6 lg:col-span-2">
             {linkColumns.map((col) => (
               <div key={col.title} className={col.className}>
                 <h4 className="font-semibold text-sm text-muted-foreground mb-2">
@@ -258,7 +258,7 @@ export function Footer() {
               </div>
             ))}
           </div>
-          <div className="md:col-span-2">
+          <div className="md:col-span-6 lg:col-span-2">
              {linkColumns2.map((col) => (
               <div key={col.title} className={col.className}>
                 <h4 className="font-semibold text-sm text-muted-foreground mb-2">
@@ -292,7 +292,7 @@ export function Footer() {
                 </p>
              </div>
           </div>
-          <div className="md:col-span-2">
+          <div className="md:col-span-6 lg:col-span-2">
             {linkColumns3.map((col) => (
                 <div key={col.title} className={col.className}>
                   <h4 className="font-semibold text-sm text-muted-foreground mb-2">
@@ -310,7 +310,7 @@ export function Footer() {
                 </div>
               ))}
           </div>
-          <div className="md:col-span-3">
+          <div className="md:col-span-6 lg:col-span-3">
              {linkColumns4.map((col) => (
                 <div key={col.title} className={col.className}>
                   <h4 className="font-semibold text-sm text-muted-foreground mb-2">
