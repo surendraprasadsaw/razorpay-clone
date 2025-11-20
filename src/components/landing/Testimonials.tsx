@@ -1,4 +1,3 @@
-
 'use client';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
@@ -65,8 +64,8 @@ export function Testimonials() {
 
   return (
     <section className="py-20 bg-secondary/30 overflow-hidden">
-      <div className="container mx-auto">
-        <div className="flex justify-between items-center mb-12 px-4">
+      <div className="container">
+        <div className="flex justify-between items-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold">
             Razorpay grows with <span className="text-primary">you!</span>
           </h2>
@@ -79,18 +78,18 @@ export function Testimonials() {
         </div>
 
         <div className="relative">
-          <div className="flex gap-8 overflow-x-auto pb-8 -m-4 p-4 no-scrollbar">
+          <div className="flex gap-8 overflow-x-auto pb-8 no-scrollbar">
             {testimonials.map((testimonial) => (
               <Card
                 key={testimonial.id}
                 className={cn(
-                  'flex-shrink-0 rounded-xl overflow-hidden group',
+                  'flex-shrink-0 rounded-xl overflow-hidden group flex flex-col',
                   testimonial.size === 'large' ? 'w-[300px]' : 'w-[320px]'
                 )}
               >
-                <CardContent className="p-0 h-full">
+                <CardContent className="p-0 h-full flex flex-col">
                   {testimonial.image ? (
-                    <div className="relative h-full">
+                    <div className="relative h-full flex-grow">
                       <Image
                         src={testimonial.image.imageUrl}
                         alt={testimonial.name}
@@ -107,7 +106,7 @@ export function Testimonials() {
                       </div>
                     </div>
                   ) : (
-                    <div className="h-full bg-card flex flex-col justify-center text-center p-8">
+                    <div className="h-full bg-card flex flex-col justify-center text-center p-8 flex-grow">
                       <blockquote className="text-lg font-medium mb-6">
                         "{testimonial.quote}"
                       </blockquote>
