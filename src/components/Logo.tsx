@@ -4,36 +4,33 @@ export function Logo({ className }: { className?: string }) {
   return (
     <div className={cn('flex items-center', className)}>
       <svg
-        width="129"
+        width="100"
         height="30"
-        viewBox="0 0 129 30"
+        viewBox="0 0 100 30"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className="text-foreground"
       >
-        <path
-          d="M28.8637 8.55338V29.375H23.229V15.9869L16.2995 29.375H11.7513L4.82178 15.9869V29.375H0.185547V8.55338H5.69841L14.0454 22.3918L22.3924 8.55338H28.8637Z"
+        <text
+          x="0"
+          y="22"
+          fontFamily="Arial, sans-serif"
+          fontSize="24"
+          fontWeight="bold"
           fill="#528FF0"
-        ></path>
-        <path
-          d="M43.6891 8.55338V29.375H38.0534V8.55338H43.6891Z"
+        >
+          M
+        </text>
+        <text
+          x="24"
+          y="22"
+          fontFamily="Arial, sans-serif"
+          fontSize="24"
+          fontWeight="bold"
           fill="currentColor"
-        ></path>
-        <path
-          d="M60.6724 29.375H55.0367V14.8099H48.816V29.375H43.1803V8.55338H48.816V12.1199H55.0367V8.55338H60.6724V29.375Z"
-          fill="currentColor"
-        ></path>
-        <path
-          d="M68.7952 19.4642C68.7952 25.105 72.7758 29.375 79.7997 29.375C86.8236 29.375 90.8042 25.105 90.8042 19.4642C90.8042 13.8234 86.8236 8.55338 79.7997 8.55338C72.7758 8.55338 68.7952 13.8234 68.7952 19.4642ZM85.1685 19.4642C85.1685 22.9517 82.9839 26.2774 79.7997 26.2774C76.6155 26.2774 74.4309 22.9517 74.4309 19.4642C74.4309 15.9767 76.6155 11.6599 79.7997 11.6599C82.9839 11.6599 85.1685 15.9767 85.1685 19.4642Z"
-          fill="currentColor"
-        ></path>
-        <path
-          d="M103.882 20.0667L106.275 29.375H100.413L99.2776 25.0435H94.4984L93.3627 29.375H87.501L94.2541 8.55338H100.741L103.882 20.0667ZM98.1189 22.1411H95.626L96.8403 16.0891L98.1189 22.1411Z"
-          fill="currentColor"
-        ></path>
-        <path
-          d="M119.866 29.375L112.936 19.0024V29.375H107.3V8.55338H111.45L118.423 20.0255V8.55338H124.059V29.375H119.866Z"
-          fill="currentColor"
-        ></path>
+        >
+          OHAN
+        </text>
       </svg>
     </div>
   );

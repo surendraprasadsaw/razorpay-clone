@@ -114,8 +114,8 @@ export function AcceptPayments() {
   ];
 
   return (
-    <section className="py-12 md:py-20 bg-secondary/30">
-      <div className="container">
+    <section className="py-12 md:py-20 bg-secondary/30 flex justify-center">
+  <div className="container max-w-7xl">
         <div className="p-4 md:p-8 border rounded-lg bg-card">
           <div className="text-center mb-8 md:mb-12">
             <h2 className="text-3xl md:text-5xl font-bold">Accept Payments</h2>

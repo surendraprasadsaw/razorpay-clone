@@ -88,15 +88,15 @@ export function PoweringEveryIndustry() {
   ];
 
   return (
-    <section className="py-12 md:py-20 bg-background">
-      <div className="container">
+    <section className="py-12 md:py-20 bg-secondary/30 flex justify-center">
+  <div className="container max-w-7xl">
         <div className="md:flex justify-between items-start mb-12 text-center md:text-left">
           <div>
-            <h2 className="text-3xl md:text-5xl font-bold leading-tight">
-              Powering every industry.
-              <br className="hidden md:block" />
-              Powering all disruptors.
-            </h2>
+          <h2 className="text-3xl md:text-5xl font-bold leading-tight text-center md:text-center">
+  Powering every industry.
+  <br className="hidden md:block" />
+  Powering all disruptors.
+</h2>
           </div>
           <div className="hidden md:flex items-center space-x-6 text-muted-foreground mt-4 md:mt-0">
             {icons.map((icon, index) => (

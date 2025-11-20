@@ -63,8 +63,8 @@ export function Testimonials() {
   ];
 
   return (
-    <section className="py-12 md:py-20 bg-secondary/30 overflow-hidden">
-      <div className="container">
+    <section className="py-12 md:py-20 bg-secondary/30 flex justify-center">
+  <div className="container max-w-7xl">
         <div className="md:flex justify-between items-center mb-12 text-center md:text-left">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-0">
             Razorpay grows with <span className="text-primary">you!</span>
