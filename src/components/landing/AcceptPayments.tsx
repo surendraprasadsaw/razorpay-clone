@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -19,6 +19,12 @@ import { cn } from '@/lib/utils';
 
 export function AcceptPayments() {
   const [activeTab, setActiveTab] = useState('Top Products');
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
 
   const tabs = [
     'Top Products',
@@ -113,7 +119,7 @@ export function AcceptPayments() {
 
           <div className="border-b mb-8 overflow-x-auto">
             <div className="flex space-x-8 whitespace-nowrap">
-              {tabs.map((tab) => (
+              {isClient && tabs.map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
@@ -162,25 +168,20 @@ export function AcceptPayments() {
                       </Button>
                     )}
                   </div>
-                  <div className="flex flex-col flex-grow">
-                    {product.content ? (
-                      <div className="p-4 border-t mt-auto">
-                          <h3 className="text-lg font-bold mb-1">{product.title}</h3>
-                          <p className="text-muted-foreground text-xs">
-                            {product.description}
-                          </p>
-                      </div>
+                  <div className="flex flex-col flex-grow p-4">
+                    <h3 className="text-lg font-bold mb-1">{product.title}</h3>
+                    <p className="text-muted-foreground text-xs mb-3 flex-grow">
+                      {product.description}
+                    </p>
+                    {product.actions ? (
+                      <div className="mt-auto">{product.actions}</div>
+                    ) : product.content ? (
+                      <div className="mt-auto -mx-4 -mb-4 border-t">{product.content}</div>
                     ) : (
-                      <div className="p-4 flex-grow flex flex-col justify-center">
-                        <h3 className="text-lg font-bold mb-1">{product.title}</h3>
-                        <p className="text-muted-foreground text-xs mb-3 flex-grow-0">
-                          {product.description}
-                        </p>
-                        {product.actions ? product.actions : (
-                          <Button variant="link" className="p-0 h-auto justify-start text-primary">
-                            Know More <ArrowRight className="ml-1 w-3 h-3" />
-                          </Button>
-                        )}
+                      <div className="mt-auto">
+                        <Button variant="link" className="p-0 h-auto justify-start text-primary">
+                          Know More <ArrowRight className="ml-1 w-3 h-3" />
+                        </Button>
                       </div>
                     )}
                   </div>
