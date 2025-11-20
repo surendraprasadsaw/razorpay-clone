@@ -59,7 +59,10 @@ export function PoweringEveryIndustry() {
   const [currentIconIndex, setCurrentIconIndex] = useState(0);
 
   useEffect(() => {
+    // This hook is to prevent hydration errors with state.
+    // Initialize state on the client side.
     setActiveTab('E-Commerce');
+    
     const interval = setInterval(() => {
       setCurrentIconIndex((prevIndex) => (prevIndex + 1) % icons.length);
     }, 1500);
