@@ -12,7 +12,7 @@ export function CtaSection() {
                     Supercharge your business with Razorpay
                 </h2>
                 <div className="mt-8">
-                    <Button size="lg" asChild style={{ backgroundColor: 'hsl(var(--primary))', color: 'hsl(var(--primary-foreground))' }}>
+                    <Button size="lg" asChild>
                         <Link href="/signup">
                             Sign Up Now <ArrowRight className="ml-2 w-4 h-4" />
                         </Link>

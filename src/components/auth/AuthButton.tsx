@@ -16,6 +16,7 @@ import { signOut } from 'firebase/auth';
 import { auth } from '@/lib/firebase/config';
 import { useRouter } from 'next/navigation';
 import { User as UserIcon, LogOut, LayoutDashboard } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 export function AuthButton() {
   const { user, loading } = useAuth();
@@ -76,7 +77,7 @@ export function AuthButton() {
       <Button asChild variant="ghost">
         <Link href="/login">Login</Link>
       </Button>
-      <Button asChild style={{ backgroundColor: 'hsl(var(--accent))', color: 'hsl(var(--accent-foreground))' }}>
+      <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
         <Link href="/signup">Sign Up</Link>
       </Button>
     </div>

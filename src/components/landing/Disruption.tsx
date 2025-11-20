@@ -42,7 +42,7 @@ export function Disruption() {
               </p>
             </CardContent>
             <CardFooter>
-              <Button style={{ backgroundColor: 'hsl(var(--primary))', color: 'hsl(var(--primary-foreground))' }}>
+              <Button>
                 Sign Up <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
               <Button variant="link">Know More</Button>
@@ -65,7 +65,7 @@ export function Disruption() {
               </p>
             </CardContent>
             <CardFooter>
-              <Button style={{ backgroundColor: 'hsl(var(--primary))', color: 'hsl(var(--primary-foreground))' }}>
+              <Button>
                 Sign Up <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
               <Button variant="link">Know More</Button>
@@ -75,7 +75,6 @@ export function Disruption() {
                 variant="default"
                 size="icon"
                 className="rounded-full h-10 w-10"
-                style={{ backgroundColor: 'hsl(var(--primary))', color: 'hsl(var(--primary-foreground))' }}
               >
                 <ChevronRight className="w-5 h-5" />
               </Button>

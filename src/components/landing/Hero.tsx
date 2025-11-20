@@ -82,7 +82,7 @@ export function Hero() {
                       {slide.tags.join(' | ')}
                     </p>
                     <div className="flex items-center justify-center lg:justify-start space-x-4">
-                      <Button size="lg" asChild style={{ backgroundColor: 'hsl(var(--primary))', color: 'hsl(var(--primary-foreground))' }}>
+                      <Button size="lg" asChild>
                         <Link href="/signup">
                           Sign Up Now <ArrowRight className="ml-2 w-4 h-4" />
                         </Link>

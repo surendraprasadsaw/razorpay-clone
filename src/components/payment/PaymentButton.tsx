@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import { createOrder, verifyPaymentAndSave } from '@/lib/actions/payment';
 import { Loader2 } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 declare global {
   interface Window {
@@ -113,7 +114,7 @@ export function PaymentButton({ amount, user }: { amount: number, user: User }) 
   };
 
   return (
-    <Button onClick={handlePayment} disabled={isLoading} className="w-full" style={{ backgroundColor: 'hsl(var(--accent))', color: 'hsl(var(--accent-foreground))' }}>
+    <Button onClick={handlePayment} disabled={isLoading} className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
       {isLoading ? (
         <>
           <Loader2 className="mr-2 h-4 w-4 animate-spin" />

@@ -144,7 +144,7 @@ export function PoweringEveryIndustry() {
                   ))}
                   <span className="text-sm">+ 70,000 others</span>
                 </div>
-                <Button size="lg" style={{ backgroundColor: 'hsl(var(--primary))', color: 'hsl(var(--primary-foreground))' }}>
+                <Button size="lg">
                   See Solutions <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </div>
