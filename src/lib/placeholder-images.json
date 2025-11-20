@@ -74,9 +74,9 @@
     },
     {
       "id": "payment-button",
-      "description": "A close-up of a houseplant in a nice pot.",
-      "imageUrl": "https://images.unsplash.com/photo-1592205869273-ab3c829f0061?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwaWxlYSUyMHBsYW50fGVufDB8fHx8MTc2NTQ2MDIxOHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "pilea plant"
+      "description": "Image showing a pay now button on a website",
+      "imageUrl": "https://images.unsplash.com/photo-1557825835-b4527f242522?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYXklMjBub3clMjBidXR0b258ZW58MHx8fHwxNzY2MDczNTE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pay now button"
     },
     {
       "id": "payment-links",

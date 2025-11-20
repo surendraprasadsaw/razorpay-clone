@@ -125,56 +125,57 @@ export function AcceptPayments() {
           </div>
         </div>
 
-        <div className="flex overflow-x-auto space-x-8 pb-8 -m-4 p-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {products.map((product) => (
             <Card
               key={product.id}
-              className="overflow-hidden flex flex-col group flex-shrink-0 w-[300px] md:w-[340px]"
+              className="overflow-hidden flex flex-col group"
             >
               <CardContent className="p-0 flex-grow flex flex-col">
-                <div className="bg-muted/40 p-4 min-h-[250px] relative flex items-center justify-center">
+                <div className="bg-muted/40 p-4 min-h-[200px] relative flex items-center justify-center">
                   {product.image && (
                     <Image
                       src={product.image.imageUrl}
                       alt={product.title}
-                      width={product.id === 'razorpay-pos' ? 150 : 250}
-                      height={200}
+                      width={product.id === 'razorpay-pos' ? 120 : 200}
+                      height={150}
                       className={cn(
                         'object-contain transition-transform duration-300 group-hover:scale-105',
-                         product.id === 'razorpay-pos' ? "w-[150px]" : "w-auto"
+                         product.id === 'razorpay-pos' ? "w-[120px]" : "w-auto"
                       )}
                        data-ai-hint={product.image.imageHint}
                     />
                   )}
                   {product.badge && (
-                    <div className="absolute top-4 right-4 bg-background/80 backdrop-blur-sm px-2 py-1 rounded-md text-xs font-semibold">
+                    <div className="absolute top-2 right-2 bg-background/80 backdrop-blur-sm px-2 py-1 rounded-md text-xs font-semibold">
                       {product.badge}
                     </div>
                   )}
                    {product.id === 'razorpay-pos' && (
-                     <Button variant="secondary" size="icon" className="absolute right-4 bottom-4 rounded-full h-10 w-10 opacity-0 group-hover:opacity-100 transition-opacity">
-                       <ChevronRight />
+                     <Button variant="secondary" size="icon" className="absolute right-2 bottom-2 rounded-full h-8 w-8 opacity-0 group-hover:opacity-100 transition-opacity">
+                       <ChevronRight className='w-4 h-4' />
                      </Button>
                    )}
                 </div>
                  <div className="flex flex-col flex-grow">
                   {product.content ? (
-                    product.content
-                  ) : (
-                    <div className="p-6 flex-grow flex flex-col">
-                      <h3 className="text-xl font-bold mb-2">{product.title}</h3>
-                      <p className="text-muted-foreground text-sm mb-4 flex-grow">
-                        {product.description}
-                      </p>
-                      {product.actions}
-                    </div>
-                  )}
-                  {product.id === 'payment-gateway' && (
-                    <div className="p-6 border-t mt-auto">
-                        <h3 className="text-xl font-bold mb-2">{product.title}</h3>
-                        <p className="text-muted-foreground text-sm">
+                     <div className="p-4 border-t mt-auto">
+                        <h3 className="text-lg font-bold mb-1">{product.title}</h3>
+                        <p className="text-muted-foreground text-xs">
                           {product.description}
                         </p>
+                    </div>
+                  ) : (
+                    <div className="p-4 flex-grow flex flex-col">
+                      <h3 className="text-lg font-bold mb-1">{product.title}</h3>
+                      <p className="text-muted-foreground text-xs mb-3 flex-grow">
+                        {product.description}
+                      </p>
+                      {product.actions ? product.actions : (
+                        <Button variant="link" className="p-0 h-auto justify-start text-primary">
+                          Know More <ArrowRight className="ml-1 w-3 h-3" />
+                        </Button>
+                      )}
                     </div>
                   )}
                 </div>
