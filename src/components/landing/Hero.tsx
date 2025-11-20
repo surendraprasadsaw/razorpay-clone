@@ -22,6 +22,8 @@ import {
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import type { EmblaCarouselType, EmblaPluginType } from 'embla-carousel-react';
 import { useCallback, useEffect, useState, useRef } from 'react';
+import Autoplay from "embla-carousel-autoplay"
+
 
 export function Hero() {
   const heroSlides = [
@@ -66,42 +68,36 @@ export function Hero() {
   const [emblaApi, setEmblaApi] = useState<EmblaCarouselType | null>(null);
   const [tweenValues, setTweenValues] = useState<number[]>([]);
 
-  const fadePlugin: EmblaPluginType = useCallback((emblaApi) => {
-    const onSelect = () => {
-      // Your onSelect logic here if needed
-    };
+  const onScroll = useCallback(() => {
+    if (!emblaApi) return
 
-    const onScroll = () => {
-      if (!emblaApi) return;
-      const engine = emblaApi.internalEngine();
-      const scrollProgress = emblaApi.scrollProgress();
+    const engine = emblaApi.internalEngine()
+    const scrollProgress = emblaApi.scrollProgress()
 
-      const styles = emblaApi.scrollSnapList().map((scrollSnap, index) => {
-        let diffToTarget = scrollSnap - scrollProgress;
+    const styles = emblaApi.scrollSnapList().map((scrollSnap, index) => {
+      let diffToTarget = scrollSnap - scrollProgress
 
-        if (engine.options.loop) {
-          engine.slideLooper.loopPoints.forEach(loopItem => {
-            const target = loopItem.target();
-            if (index === loopItem.index && target !== 0) {
-              const sign = Math.sign(target);
-              if (sign === -1) diffToTarget = scrollSnap - (1 + scrollProgress);
-              if (sign === 1) diffToTarget = scrollSnap + (1 - scrollProgress);
-            }
-          });
-        }
-        return 1 - Math.abs(diffToTarget);
-      });
-      setTweenValues(styles);
-    };
-    
-    emblaApi.on('select', onSelect);
-    emblaApi.on('scroll', onScroll);
-    emblaApi.on('reInit', onScroll);
-    // Initial call
-    onScroll();
-  }, []);
-  
-  const fadePluginRef = useRef(fadePlugin);
+      if (engine.options.loop) {
+        engine.slideLooper.loopPoints.forEach((loopItem) => {
+          const target = loopItem.target()
+          if (index === loopItem.index && target !== 0) {
+            const sign = Math.sign(target)
+            if (sign === -1) diffToTarget = scrollSnap - (1 + scrollProgress)
+            if (sign === 1) diffToTarget = scrollSnap + (1 - scrollProgress)
+          }
+        })
+      }
+      return 1 - Math.abs(diffToTarget)
+    })
+    setTweenValues(styles)
+  }, [emblaApi, setTweenValues])
+
+  useEffect(() => {
+    if (!emblaApi) return
+    onScroll()
+    emblaApi.on('scroll', onScroll)
+    emblaApi.on('reInit', onScroll)
+  }, [emblaApi, onScroll])
 
   return (
     <section className="relative bg-background overflow-hidden py-20">
@@ -110,13 +106,18 @@ export function Hero() {
         opts={{
           loop: true,
         }}
-        plugins={[fadePluginRef.current]}
+        plugins={[
+          Autoplay({
+            delay: 5000,
+            stopOnInteraction: true,
+          })
+        ]}
         className="w-full"
       >
         <CarouselContent>
           {heroSlides.map((slide, index) => (
             <CarouselItem key={slide.id} style={{
-                ...(tweenValues[index] !== undefined && { opacity: tweenValues[index] })
+                ...(tweenValues.length && { opacity: tweenValues[index] })
               }}>
               <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-10 items-center">
@@ -128,7 +129,7 @@ export function Hero() {
                       {slide.tags.join(' | ')}
                     </p>
                     <div className="flex items-center justify-center lg:justify-start space-x-4">
-                      <Button size="lg" asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
+                      <Button size="lg" asChild>
                         <Link href="/signup">
                           Sign Up Now <ArrowRight className="ml-2 w-4 h-4" />
                         </Link>
