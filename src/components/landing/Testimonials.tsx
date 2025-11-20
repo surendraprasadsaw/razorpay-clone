@@ -5,7 +5,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 import { Button } from '../ui/button';
 import { ArrowRight } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export function Testimonials() {
   const testimonials = [
@@ -62,6 +62,13 @@ export function Testimonials() {
     },
   ];
 
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+
   return (
     <section className="py-20 bg-secondary/30 overflow-hidden">
       <div className="container mx-auto">
@@ -78,7 +85,7 @@ export function Testimonials() {
         </div>
 
         <div className="relative">
-          <div className="flex gap-8 overflow-x-auto pb-8 -m-4 p-4 no-scrollbar">
+          {isClient && <div className="flex gap-8 overflow-x-auto pb-8 -m-4 p-4 no-scrollbar">
             {testimonials.map((testimonial) => (
               <Card
                 key={testimonial.id}
@@ -121,7 +128,7 @@ export function Testimonials() {
                 </CardContent>
               </Card>
             ))}
-          </div>
+          </div>}
         </div>
       </div>
       <style jsx>{`
