@@ -22,103 +22,81 @@ import {
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import type { EmblaCarouselType, EmblaPluginType } from 'embla-carousel-react';
 import { useCallback, useEffect, useState, useRef } from 'react';
-import Autoplay from "embla-carousel-autoplay"
+import Autoplay from "embla-carousel-autoplay";
+import { cn } from '@/lib/utils';
+
+const heroSlides = [
+  {
+    id: 1,
+    title: "Effortless Banking for India's boldest disruptors",
+    tags: ['Powerful Automation', 'Smart Dashboard', 'Integrated Access'],
+    image: PlaceHolderImages.find(p => p.id === 'hero-carousel-1'),
+    cardImage: PlaceHolderImages.find(p => p.id === 'hero-card-1'),
+    personName: 'Abhishek',
+    personTitle: 'MYGATE FOUNDER',
+  },
+  {
+    id: 2,
+    title: 'Seamless Payroll for modern businesses',
+    tags: ['Automated Compliance', 'Simple & Powerful', 'Happy Employees'],
+    image: PlaceHolderImages.find(p => p.id === 'hero-carousel-2'),
+    cardImage: PlaceHolderImages.find(p => p.id === 'hero-card-2'),
+    personName: 'Jane Doe',
+    personTitle: 'CEO, STARTUP INC.',
+  },
+  {
+    id: 3,
+    title: 'Global Payments, Simplified for you',
+    tags: ['100+ Currencies', 'Low Fees', 'Easy Integration'],
+    image: PlaceHolderImages.find(p => p.id === 'hero-carousel-3'),
+    cardImage: PlaceHolderImages.find(p => p.id === 'hero-card-3'),
+    personName: 'John Smith',
+    personTitle: 'FOUNDER, E-COM GLOBAL',
+  },
+];
+
+const products = [
+  { name: 'Accept Payments', icon: <CreditCard className="w-4 h-4 mr-2" /> },
+  { name: 'Make Payouts', icon: <Send className="w-4 h-4 mr-2" /> },
+  { name: 'Start Business Banking', icon: <Building className="w-4 h-4 mr-2" /> },
+  { name: 'Get Credit', icon: <BadgePercent className="w-4 h-4 mr-2" /> },
+  { name: 'Automate Payroll', icon: <FileText className="w-4 h-4 mr-2" /> },
+  { name: 'Something else?', icon: <Search className="w-4 h-4 mr-2" /> },
+];
 
 
-export function Hero() {
-  const heroSlides = [
-    {
-      id: 1,
-      title: "Effortless Banking for India's boldest disruptors",
-      tags: ['Powerful Automation', 'Smart Dashboard', 'Integrated Access'],
-      image: PlaceHolderImages.find(p => p.id === 'hero-carousel-1'),
-      cardImage: PlaceHolderImages.find(p => p.id === 'hero-card-1'),
-      personName: 'Abhishek',
-      personTitle: 'MYGATE FOUNDER',
-    },
-    {
-      id: 2,
-      title: 'Seamless Payroll for modern businesses',
-      tags: ['Automated Compliance', 'Simple & Powerful', 'Happy Employees'],
-      image: PlaceHolderImages.find(p => p.id === 'hero-carousel-2'),
-      cardImage: PlaceHolderImages.find(p => p.id === 'hero-card-2'),
-      personName: 'Jane Doe',
-      personTitle: 'CEO, STARTUP INC.',
-    },
-    {
-      id: 3,
-      title: 'Global Payments, Simplified for you',
-      tags: ['100+ Currencies', 'Low Fees', 'Easy Integration'],
-      image: PlaceHolderImages.find(p => p.id === 'hero-carousel-3'),
-      cardImage: PlaceHolderImages.find(p => p.id === 'hero-card-3'),
-      personName: 'John Smith',
-      personTitle: 'FOUNDER, E-COM GLOBAL',
-    },
-  ];
-
-  const products = [
-    { name: 'Accept Payments', icon: <CreditCard className="w-4 h-4 mr-2" /> },
-    { name: 'Make Payouts', icon: <Send className="w-4 h-4 mr-2" /> },
-    { name: 'Start Business Banking', icon: <Building className="w-4 h-4 mr-2" /> },
-    { name: 'Get Credit', icon: <BadgePercent className="w-4 h-4 mr-2" /> },
-    { name: 'Automate Payroll', icon: <FileText className="w-4 h-4 mr-2" /> },
-    { name: 'Something else?', icon: <Search className="w-4 h-4 mr-2" /> },
-  ];
-
+function HeroCarousel() {
   const [emblaApi, setEmblaApi] = useState<EmblaCarouselType | null>(null);
-  const [tweenValues, setTweenValues] = useState<number[]>([]);
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
-  const onScroll = useCallback(() => {
-    if (!emblaApi) return
+  const autoplayPlugin = useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: true })
+  );
 
-    const engine = emblaApi.internalEngine()
-    const scrollProgress = emblaApi.scrollProgress()
-
-    const styles = emblaApi.scrollSnapList().map((scrollSnap, index) => {
-      let diffToTarget = scrollSnap - scrollProgress
-
-      if (engine.options.loop) {
-        engine.slideLooper.loopPoints.forEach((loopItem) => {
-          const target = loopItem.target()
-          if (index === loopItem.index && target !== 0) {
-            const sign = Math.sign(target)
-            if (sign === -1) diffToTarget = scrollSnap - (1 + scrollProgress)
-            if (sign === 1) diffToTarget = scrollSnap + (1 - scrollProgress)
-          }
-        })
-      }
-      return 1 - Math.abs(diffToTarget)
-    })
-    setTweenValues(styles)
-  }, [emblaApi, setTweenValues])
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
 
   useEffect(() => {
-    if (!emblaApi) return
-    onScroll()
-    emblaApi.on('scroll', onScroll)
-    emblaApi.on('reInit', onScroll)
-  }, [emblaApi, onScroll])
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on('select', onSelect);
+    emblaApi.on('reInit', onSelect);
+  }, [emblaApi, onSelect]);
 
   return (
-    <section className="relative bg-background overflow-hidden py-20">
       <Carousel
         setApi={setEmblaApi}
         opts={{
           loop: true,
         }}
-        plugins={[
-          Autoplay({
-            delay: 5000,
-            stopOnInteraction: true,
-          })
-        ]}
+        plugins={[autoplayPlugin.current]}
         className="w-full"
       >
         <CarouselContent>
           {heroSlides.map((slide, index) => (
-            <CarouselItem key={slide.id} style={{
-                ...(tweenValues.length && { opacity: tweenValues[index] })
-              }}>
+            <CarouselItem key={slide.id} className="transition-opacity duration-500" style={{ opacity: selectedIndex === index ? 1 : 0 }}>
               <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-10 items-center">
                   <div className="text-center lg:text-left space-y-6">
@@ -149,6 +127,7 @@ export function Hero() {
                           height={450}
                           className="relative z-10 object-cover rounded-md"
                           data-ai-hint={slide.image.imageHint}
+                          priority={index === 0}
                         />
                       )}
                       {slide.cardImage && (
@@ -176,6 +155,25 @@ export function Hero() {
         <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-30 hidden lg:flex" />
         <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-30 hidden lg:flex" />
       </Carousel>
+  );
+}
+
+
+export function Hero() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  return (
+    <section className="relative bg-background overflow-hidden py-20">
+      {isClient ? <HeroCarousel /> : 
+        <div className="container">
+            {/* Placeholder to avoid layout shift */}
+            <div className="h-[500px] w-full" />
+        </div>
+      }
       <div className="bg-secondary/50 border-t border-border">
          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-wrap items-center justify-center gap-4">
