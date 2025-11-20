@@ -20,7 +20,7 @@ import {
   Search,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import Autoplay from 'embla-carousel-autoplay';
 import Fade from 'embla-carousel-fade';
 
@@ -64,14 +64,10 @@ const products = [
 ];
 
 export function Hero() {
-  const autoplay = useRef(
-    Autoplay({ delay: 5000, stopOnInteraction: true, stopOnMouseEnter: true })
-  );
-  const fade = useRef(Fade());
-
-  useEffect(() => {
-    // This hook is for client-side only initialization if needed
-  }, []);
+    const plugins = useRef([
+    Autoplay({ delay: 5000, stopOnInteraction: true, stopOnMouseEnter: true }),
+    Fade(),
+  ]);
 
   return (
     <section className="relative bg-background overflow-hidden pt-20">
@@ -79,7 +75,7 @@ export function Hero() {
         opts={{
           loop: true,
         }}
-        plugins={[autoplay.current, fade.current]}
+        plugins={plugins.current}
         className="w-full"
       >
         <CarouselContent>

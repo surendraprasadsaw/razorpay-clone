@@ -85,8 +85,11 @@ export function Disruption() {
                 variant="default"
                 size="icon"
                 className="rounded-full h-10 w-10"
+                asChild
               >
-                <ChevronRight className="w-5 h-5" />
+                <Link href="#">
+                  <ChevronRight className="w-5 h-5" />
+                </Link>
               </Button>
             </div>
           </Card>

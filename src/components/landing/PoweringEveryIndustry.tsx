@@ -22,7 +22,7 @@ import { cn } from '@/lib/utils';
 import Link from 'next/link';
 
 export function PoweringEveryIndustry() {
-  const [activeTab, setActiveTab] = useState('E-Commerce');
+  const [activeTab, setActiveTab] = useState('');
   const image = PlaceHolderImages.find((p) => p.id === 'powering-ecommerce');
 
   const industries = [
@@ -59,6 +59,7 @@ export function PoweringEveryIndustry() {
   const [currentIconIndex, setCurrentIconIndex] = useState(0);
 
   useEffect(() => {
+    setActiveTab('E-Commerce');
     const interval = setInterval(() => {
       setCurrentIconIndex((prevIndex) => (prevIndex + 1) % icons.length);
     }, 1500);
@@ -106,7 +107,7 @@ export function PoweringEveryIndustry() {
           </div>
         </div>
 
-        <Tabs defaultValue="E-Commerce" onValueChange={setActiveTab}>
+        <Tabs value={activeTab} onValueChange={setActiveTab}>
           <TabsList className="grid w-full grid-cols-2 sm:grid-cols-5 mb-8">
             {industries.map((industry) => (
               <TabsTrigger key={industry.name} value={industry.name}>

@@ -18,10 +18,12 @@ import { cn } from '@/lib/utils';
 import { useEffect, useState } from 'react';
 
 export function AcceptPayments() {
-  const [activeTab, setActiveTab] = useState('Top Products');
+  const [activeTab, setActiveTab] = useState('');
 
   useEffect(() => {
     // This hook is to prevent hydration errors with state.
+    // Initialize state on the client side.
+    setActiveTab('Top Products');
   }, []);
 
   const tabs = [
@@ -89,7 +91,11 @@ export function AcceptPayments() {
                 Sign up Now <ArrowRight className="ml-2 w-4 h-4" />
              </Link>
           </Button>
-          <Button variant="link">Know More</Button>
+          <Button variant="link" asChild>
+             <Link href="#">
+                Know More
+             </Link>
+          </Button>
         </div>
       ),
     },
@@ -163,9 +169,11 @@ export function AcceptPayments() {
                       </div>
                     )}
                     {product.id === 'razorpay-pos' && (
-                      <Button variant="secondary" size="icon" className="absolute right-2 bottom-2 rounded-full h-8 w-8 opacity-0 group-hover:opacity-100 transition-opacity">
-                        <ChevronRight className='w-4 h-4' />
-                      </Button>
+                       <Button asChild variant="secondary" size="icon" className="absolute right-2 bottom-2 rounded-full h-8 w-8 opacity-0 group-hover:opacity-100 transition-opacity">
+                         <Link href="#">
+                            <ChevronRight className='w-4 h-4' />
+                         </Link>
+                       </Button>
                     )}
                   </div>
                   <div className="flex flex-col flex-grow p-4">
@@ -179,8 +187,10 @@ export function AcceptPayments() {
                       <div className="mt-auto -mx-4 -mb-4 border-t">{product.content}</div>
                     ) : (
                       <div className="mt-auto">
-                        <Button variant="link" className="p-0 h-auto justify-start text-primary">
-                          Know More <ArrowRight className="ml-1 w-3 h-3" />
+                        <Button variant="link" asChild className="p-0 h-auto justify-start text-primary">
+                          <Link href="#">
+                            Know More <ArrowRight className="ml-1 w-3 h-3" />
+                          </Link>
                         </Button>
                       </div>
                     )}
