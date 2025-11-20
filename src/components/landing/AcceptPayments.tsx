@@ -1,7 +1,6 @@
 
 'use client';
 
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -16,15 +15,10 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
+import { useState } from 'react';
 
 export function AcceptPayments() {
   const [activeTab, setActiveTab] = useState('Top Products');
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
 
   const tabs = [
     'Top Products',
@@ -72,7 +66,7 @@ export function AcceptPayments() {
               </div>
               <ChevronRight className="w-5 h-5 text-muted-foreground" />
             </div>
-          ))}
+          ),
         </div>
       ),
     },
@@ -84,11 +78,11 @@ export function AcceptPayments() {
       badge: 'NO CODE',
       actions: (
         <div className="flex items-center space-x-2">
-          <Button asChild>
-             <Link href="/signup">
+          <Link href="/signup">
+             <Button>
                 Sign up Now <ArrowRight className="ml-2 w-4 h-4" />
-             </Link>
-          </Button>
+             </Button>
+          </Link>
           <Button variant="link">Know More</Button>
         </div>
       ),
@@ -119,7 +113,7 @@ export function AcceptPayments() {
 
           <div className="border-b mb-8 overflow-x-auto">
             <div className="flex space-x-8 whitespace-nowrap">
-              {isClient && tabs.map((tab) => (
+              {tabs.map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}

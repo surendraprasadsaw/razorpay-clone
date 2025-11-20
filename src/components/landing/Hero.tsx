@@ -21,9 +21,7 @@ import {
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import type { EmblaCarouselType, EmblaPluginType } from 'embla-carousel-react';
-import { useCallback, useEffect, useState, useRef } from 'react';
-import Autoplay from "embla-carousel-autoplay";
-import { cn } from '@/lib/utils';
+import { useCallback, useEffect, useState } from 'react';
 
 const heroSlides = [
   {
@@ -64,39 +62,72 @@ const products = [
   { name: 'Something else?', icon: <Search className="w-4 h-4 mr-2" /> },
 ];
 
+export function Hero() {
+  const [emblaRef, emblaApi] = useState<EmblaCarouselType | null>(null);
 
-function HeroCarousel() {
-  const [emblaApi, setEmblaApi] = useState<EmblaCarouselType | null>(null);
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  const TWEEN_FACTOR = 1.2;
 
-  const autoplayPlugin = useRef(
-    Autoplay({ delay: 5000, stopOnInteraction: true })
-  );
-
-  const onSelect = useCallback(() => {
+  const setTweenFactor = useCallback((emblaApi: EmblaCarouselType) => {
     if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, [emblaApi]);
+    const engine = emblaApi.internalEngine();
+    engine.tweenFactor.set(TWEEN_FACTOR);
+  }, []);
+
+  const tweenOpacity = useCallback(
+    (emblaApi: EmblaCarouselType, eventName?: EmblaCarouselType['eventName']) => {
+      if (!emblaApi) return;
+      setTweenFactor(emblaApi);
+      const engine = emblaApi.internalEngine();
+      const scrollProgress = emblaApi.scrollProgress();
+      const slidesInView = emblaApi.slidesInView();
+
+      emblaApi.scrollSnapList().forEach((scrollSnap, snapIndex) => {
+        let diffToTarget = scrollSnap - scrollProgress;
+        const slidesInSnap = engine.slideRegistry[snapIndex];
+
+        slidesInSnap.forEach((slideIndex) => {
+          if (slidesInView.indexOf(slideIndex) === -1) return;
+
+          if (engine.options.loop) {
+            engine.slideLooper.loopPoints.forEach((loopItem) => {
+              const target = loopItem.target();
+              if (slideIndex === loopItem.index && target !== 0) {
+                const sign = Math.sign(target);
+                if (sign === -1) diffToTarget = scrollSnap - (1 + scrollProgress);
+                if (sign === 1) diffToTarget = scrollSnap + (1 - scrollProgress);
+              }
+            });
+          }
+          const tweenValue = 1 - Math.abs(diffToTarget * TWEEN_FACTOR);
+          const opacity = Number(tweenValue.toFixed(3));
+          emblaApi.slideNodes()[slideIndex].style.opacity = opacity.toString();
+        });
+      });
+    },
+    [setTweenFactor]
+  );
 
   useEffect(() => {
     if (!emblaApi) return;
-    onSelect();
-    emblaApi.on('select', onSelect);
-    emblaApi.on('reInit', onSelect);
-  }, [emblaApi, onSelect]);
+    tweenOpacity(emblaApi);
+    emblaApi
+      .on('scroll', tweenOpacity)
+      .on('reInit', setTweenFactor)
+      .on('resize', setTweenFactor)
+  }, [emblaApi, tweenOpacity, setTweenFactor]);
 
   return (
+    <section className="relative bg-background overflow-hidden py-20">
       <Carousel
-        setApi={setEmblaApi}
+        setApi={emblaApi}
         opts={{
           loop: true,
         }}
-        plugins={[autoplayPlugin.current]}
         className="w-full"
       >
         <CarouselContent>
-          {heroSlides.map((slide, index) => (
-            <CarouselItem key={slide.id} className="transition-opacity duration-500" style={{ opacity: selectedIndex === index ? 1 : 0 }}>
+          {heroSlides.map((slide) => (
+            <CarouselItem key={slide.id}>
               <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-10 items-center">
                   <div className="text-center lg:text-left space-y-6">
@@ -107,7 +138,7 @@ function HeroCarousel() {
                       {slide.tags.join(' | ')}
                     </p>
                     <div className="flex items-center justify-center lg:justify-start space-x-4">
-                      <Button size="lg" asChild>
+                      <Button size="lg" asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
                         <Link href="/signup">
                           Sign Up Now <ArrowRight className="ml-2 w-4 h-4" />
                         </Link>
@@ -127,7 +158,6 @@ function HeroCarousel() {
                           height={450}
                           className="relative z-10 object-cover rounded-md"
                           data-ai-hint={slide.image.imageHint}
-                          priority={index === 0}
                         />
                       )}
                       {slide.cardImage && (
@@ -155,25 +185,6 @@ function HeroCarousel() {
         <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-30 hidden lg:flex" />
         <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-30 hidden lg:flex" />
       </Carousel>
-  );
-}
-
-
-export function Hero() {
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  return (
-    <section className="relative bg-background overflow-hidden py-20">
-      {isClient ? <HeroCarousel /> : 
-        <div className="container">
-            {/* Placeholder to avoid layout shift */}
-            <div className="h-[500px] w-full" />
-        </div>
-      }
       <div className="bg-secondary/50 border-t border-border">
          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-wrap items-center justify-center gap-4">
