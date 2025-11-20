@@ -144,7 +144,7 @@ export function AcceptPayments() {
             {products.map((product) => (
               <Card
                 key={product.id}
-                className="overflow-hidden flex flex-col group h-full"
+                className="overflow-hidden flex flex-col group h-full text-center"
               >
                 <CardContent className="p-0 flex-grow flex flex-col">
                   <div className="bg-muted/40 p-4 min-h-[200px] relative flex items-center justify-center">
@@ -174,18 +174,18 @@ export function AcceptPayments() {
                        </Button>
                     )}
                   </div>
-                  <div className="flex flex-col flex-grow p-4">
+                  <div className="flex flex-col flex-grow p-4 items-center">
                     <h3 className="text-lg font-bold mb-1">{product.title}</h3>
                     <p className="text-muted-foreground text-xs mb-3 flex-grow">
                       {product.description}
                     </p>
                     {product.actions ? (
-                      <div className="mt-auto">{product.actions}</div>
+                      <div className="mt-auto flex justify-center">{product.actions}</div>
                     ) : product.content ? (
-                      <div className="mt-auto -mx-4 -mb-4 border-t">{product.content}</div>
+                      <div className="mt-auto -mx-4 -mb-4 border-t w-full">{product.content}</div>
                     ) : (
                       <div className="mt-auto">
-                        <Button variant="link" asChild className="p-0 h-auto justify-start text-primary">
+                        <Button variant="link" asChild className="p-0 h-auto text-primary">
                           <Link href="#">
                             Know More <ArrowRight className="ml-1 w-3 h-3" />
                           </Link>

@@ -33,7 +33,7 @@ export function Features() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <Card key={index} className="text-center p-6 flex flex-col">
+            <Card key={index} className="text-center p-6 flex flex-col justify-center items-center">
               <CardHeader className="flex-grow flex flex-col justify-center items-center">
                 <div className="flex justify-center mb-4">{feature.icon}</div>
                 <CardTitle>{feature.title}</CardTitle>

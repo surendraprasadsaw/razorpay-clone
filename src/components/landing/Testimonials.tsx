@@ -1,3 +1,4 @@
+
 'use client';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
@@ -22,7 +23,7 @@ export function Testimonials() {
       id: 'nischay-ag',
       name: 'Nischay AG',
       title: 'Co-founder, Jar',
-      image: PlaceHolderImages.find((p) => p.id === 'testimonial-nischay'),
+      image: null,
       quote:
         'RazorpayX works for most of our needs - be it our salaries, be it our compliance, be it our payments to vendors And the biggest headache of all OTPs went away.',
       size: 'medium',
@@ -87,9 +88,9 @@ export function Testimonials() {
                   testimonial.size === 'large' ? 'w-[300px]' : 'w-[320px]'
                 )}
               >
-                <CardContent className="p-0">
+                <CardContent className="p-0 h-full">
                   {testimonial.image ? (
-                    <div className="relative h-[400px]">
+                    <div className="relative h-full">
                       <Image
                         src={testimonial.image.imageUrl}
                         alt={testimonial.name}
@@ -106,7 +107,7 @@ export function Testimonials() {
                       </div>
                     </div>
                   ) : (
-                    <div className="h-[400px] bg-card flex flex-col justify-center p-8">
+                    <div className="h-full bg-card flex flex-col justify-center text-center p-8">
                       <blockquote className="text-lg font-medium mb-6">
                         "{testimonial.quote}"
                       </blockquote>

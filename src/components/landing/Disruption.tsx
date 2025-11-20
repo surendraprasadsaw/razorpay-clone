@@ -27,12 +27,12 @@ export function Disruption() {
           </h2>
         </div>
         <div className="grid md:grid-cols-2 gap-8 items-stretch">
-          <Card className="flex flex-col">
+          <Card className="flex flex-col text-center">
             <CardHeader className="flex flex-row items-center justify-between">
               <span className="font-semibold">MoneySaver Export Account</span>
               <Globe className="w-5 h-5 text-muted-foreground" />
             </CardHeader>
-            <CardContent className="flex-grow">
+            <CardContent className="flex-grow flex flex-col justify-center">
               <h3 className="text-3xl font-bold text-primary mb-4">
                 Open a virtual account in 200+ countries, save up to 50% on
                 international bank transfer charges. Receive
@@ -43,7 +43,7 @@ export function Disruption() {
                 account
               </p>
             </CardContent>
-            <CardFooter>
+            <CardFooter className="justify-center">
               <Button asChild>
                 <Link href="/signup">
                   Sign Up <ArrowRight className="ml-2 w-4 h-4" />
@@ -55,12 +55,12 @@ export function Disruption() {
             </CardFooter>
           </Card>
 
-          <Card className="flex flex-col relative overflow-hidden">
+          <Card className="flex flex-col relative overflow-hidden text-center">
             <CardHeader className="flex flex-row items-center justify-between">
               <span className="font-semibold">Turbo UPI</span>
               <ChevronsRight className="w-5 h-5 text-muted-foreground" />
             </CardHeader>
-            <CardContent className="flex-grow">
+            <CardContent className="flex-grow flex flex-col justify-center">
               <p className="text-lg text-primary mb-4 font-medium">
                 Experience a 5X faster checkout, achieve a 10% success rate
                 boost, all without any redirections to UPI apps.
@@ -70,7 +70,7 @@ export function Disruption() {
                 businesses
               </p>
             </CardContent>
-            <CardFooter>
+            <CardFooter className="justify-center">
               <Button asChild>
                 <Link href="/signup">
                   Sign Up <ArrowRight className="ml-2 w-4 h-4" />
@@ -81,7 +81,7 @@ export function Disruption() {
               </Button>
             </CardFooter>
             <div className="absolute right-4 top-1/2 -translate-y-1/2">
-              <Button
+               <Button
                 variant="default"
                 size="icon"
                 className="rounded-full h-10 w-10"
