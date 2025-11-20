@@ -1,4 +1,3 @@
-
 'use client';
 
 import {
@@ -21,8 +20,9 @@ import {
   Search,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import type { EmblaCarouselType } from 'embla-carousel-react';
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useRef } from 'react';
+import Autoplay from 'embla-carousel-autoplay';
+import Fade from 'embla-carousel-fade';
 
 const heroSlides = [
   {
@@ -64,66 +64,22 @@ const products = [
 ];
 
 export function Hero() {
-  const [emblaApi, setEmblaApi] = useState<EmblaCarouselType | null>(null);
-
-  const TWEEN_FACTOR = 1.2;
-
-  const setTweenFactor = useCallback((emblaApi: EmblaCarouselType) => {
-    if (!emblaApi) return;
-    const engine = emblaApi.internalEngine();
-    engine.tweenFactor.set(TWEEN_FACTOR);
-  }, []);
-
-  const tweenOpacity = useCallback(
-    (emblaApi: EmblaCarouselType) => {
-      if (!emblaApi) return;
-      setTweenFactor(emblaApi);
-      const engine = emblaApi.internalEngine();
-      const scrollProgress = emblaApi.scrollProgress();
-      const slidesInView = emblaApi.slidesInView();
-
-      emblaApi.scrollSnapList().forEach((scrollSnap, snapIndex) => {
-        let diffToTarget = scrollSnap - scrollProgress;
-        const slidesInSnap = engine.slideRegistry[snapIndex];
-
-        slidesInSnap.forEach((slideIndex) => {
-          if (slidesInView.indexOf(slideIndex) === -1) return;
-
-          if (engine.options.loop) {
-            engine.slideLooper.loopPoints.forEach((loopItem) => {
-              const target = loopItem.target();
-              if (slideIndex === loopItem.index && target !== 0) {
-                const sign = Math.sign(target);
-                if (sign === -1) diffToTarget = scrollSnap - (1 + scrollProgress);
-                if (sign === 1) diffToTarget = scrollSnap + (1 - scrollProgress);
-              }
-            });
-          }
-          const tweenValue = 1 - Math.abs(diffToTarget * TWEEN_FACTOR);
-          const opacity = Number(tweenValue.toFixed(3));
-          emblaApi.slideNodes()[slideIndex].style.opacity = opacity.toString();
-        });
-      });
-    },
-    [setTweenFactor]
+  const autoplay = useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: true, stopOnMouseEnter: true })
   );
+  const fade = useRef(Fade());
 
   useEffect(() => {
-    if (!emblaApi) return;
-    tweenOpacity(emblaApi);
-    emblaApi
-      .on('scroll', tweenOpacity)
-      .on('reInit', setTweenFactor)
-      .on('resize', setTweenFactor);
-  }, [emblaApi, tweenOpacity, setTweenFactor]);
+    // This hook is for client-side only initialization if needed
+  }, []);
 
   return (
-    <section className="relative bg-background overflow-hidden py-20">
+    <section className="relative bg-background overflow-hidden pt-20">
       <Carousel
-        setApi={setEmblaApi}
         opts={{
           loop: true,
         }}
+        plugins={[autoplay.current, fade.current]}
         className="w-full"
       >
         <CarouselContent>
