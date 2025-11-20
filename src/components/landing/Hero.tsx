@@ -20,8 +20,8 @@ import {
   Search,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import type { EmblaCarouselType } from 'embla-carousel-react';
-import { useCallback, useEffect, useState } from 'react';
+import type { EmblaCarouselType, EmblaPluginType } from 'embla-carousel-react';
+import { useCallback, useEffect, useState, useRef } from 'react';
 
 export function Hero() {
   const heroSlides = [
@@ -66,54 +66,60 @@ export function Hero() {
   const [emblaApi, setEmblaApi] = useState<EmblaCarouselType | null>(null);
   const [tweenValues, setTweenValues] = useState<number[]>([]);
 
-  const onScroll = useCallback(() => {
-    if (!emblaApi) return;
+  const fadePlugin: EmblaPluginType = useCallback((emblaApi) => {
+    const onSelect = () => {
+      // Your onSelect logic here if needed
+    };
 
-    const engine = emblaApi.internalEngine();
-    const scrollProgress = emblaApi.scrollProgress();
+    const onScroll = () => {
+      if (!emblaApi) return;
+      const engine = emblaApi.internalEngine();
+      const scrollProgress = emblaApi.scrollProgress();
 
-    const styles = emblaApi.scrollSnapList().map((scrollSnap, index) => {
-      let diffToTarget = scrollSnap - scrollProgress;
+      const styles = emblaApi.scrollSnapList().map((scrollSnap, index) => {
+        let diffToTarget = scrollSnap - scrollProgress;
 
-      if (engine.options.loop) {
-        engine.slideLooper.loopPoints.forEach(loopItem => {
-          const target = loopItem.target();
-          if (index === loopItem.index && target !== 0) {
-            const sign = Math.sign(target);
-            if (sign === -1) diffToTarget = scrollSnap - (1 + scrollProgress);
-            if (sign === 1) diffToTarget = scrollSnap + (1 - scrollProgress);
-          }
-        });
-      }
-      return diffToTarget;
-    });
-    setTweenValues(styles);
-  }, [emblaApi, setTweenValues]);
-
-
-  useEffect(() => {
-    if (!emblaApi) return;
-    onScroll();
+        if (engine.options.loop) {
+          engine.slideLooper.loopPoints.forEach(loopItem => {
+            const target = loopItem.target();
+            if (index === loopItem.index && target !== 0) {
+              const sign = Math.sign(target);
+              if (sign === -1) diffToTarget = scrollSnap - (1 + scrollProgress);
+              if (sign === 1) diffToTarget = scrollSnap + (1 - scrollProgress);
+            }
+          });
+        }
+        return 1 - Math.abs(diffToTarget);
+      });
+      setTweenValues(styles);
+    };
+    
+    emblaApi.on('select', onSelect);
     emblaApi.on('scroll', onScroll);
     emblaApi.on('reInit', onScroll);
-  }, [emblaApi, onScroll]);
+    // Initial call
+    onScroll();
+  }, []);
+  
+  const fadePluginRef = useRef(fadePlugin);
 
   return (
-    <section className="relative bg-background overflow-hidden">
+    <section className="relative bg-background overflow-hidden py-20">
       <Carousel
         setApi={setEmblaApi}
         opts={{
           loop: true,
         }}
+        plugins={[fadePluginRef.current]}
         className="w-full"
       >
         <CarouselContent>
           {heroSlides.map((slide, index) => (
             <CarouselItem key={slide.id} style={{
-                ...(tweenValues.length && { opacity: 1 - Math.abs(tweenValues[index]) })
+                ...(tweenValues[index] !== undefined && { opacity: tweenValues[index] })
               }}>
               <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid lg:grid-cols-2 gap-10 items-center py-20">
+                <div className="grid lg:grid-cols-2 gap-10 items-center">
                   <div className="text-center lg:text-left space-y-6">
                     <h1 className="text-4xl md:text-5xl font-bold text-foreground">
                       {slide.title}
