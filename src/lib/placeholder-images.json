@@ -81,13 +81,13 @@
     {
       "id": "payment-links",
       "description": "A woman smiling while looking at her phone.",
-      "imageUrl": "https://images.unsplash.com/photo-1615232857429-7721d643d838?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21hbiUyMG9uJTIwcGhvbmUlMjBzbWlsaW5nfGVufDB8fHx8MTc2NTQ2MDIxOHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "woman phone smiling"
+      "imageUrl": "https://images.unsplash.com/photo-1653762383085-0e24b0da8285?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3b21hbiUyMHBob25lfGVufDB8fHx8MTc2MzQ5NjQwNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman phone"
     },
     {
       "id": "razorpay-pos",
       "description": "A hand holding a point-of-sale (POS) terminal.",
-      "imageUrl": "https://images.unsplash.com/photo-1643697444586-a36c641d4013?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwb3MlMjB0ZXJtaW5hbHxlbnwwfHx8fDE3NjU0NjAyMTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1706827183359-6b015aaad56c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwb3MlMjB0ZXJtaW5hbHxlbnwwfHx8fDE3NjM2MDU5Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "pos terminal"
     },
     {

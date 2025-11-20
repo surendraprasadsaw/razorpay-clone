@@ -137,7 +137,7 @@ export function AcceptPayments() {
                     <Image
                       src={product.image.imageUrl}
                       alt={product.title}
-                      width={product.id === 'razorpay-pos' ? 200 : 250}
+                      width={product.id === 'razorpay-pos' ? 150 : 250}
                       height={200}
                       className={cn(
                         'object-contain transition-transform duration-300 group-hover:scale-105',
