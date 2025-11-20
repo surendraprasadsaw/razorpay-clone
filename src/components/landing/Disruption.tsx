@@ -1,3 +1,4 @@
+
 'use client';
 import { Button } from '@/components/ui/button';
 import {
@@ -14,6 +15,7 @@ import {
   ChevronsRight,
   ChevronRight,
 } from 'lucide-react';
+import Link from 'next/link';
 
 export function Disruption() {
   return (
@@ -42,10 +44,14 @@ export function Disruption() {
               </p>
             </CardContent>
             <CardFooter>
-              <Button>
-                Sign Up <ArrowRight className="ml-2 w-4 h-4" />
+              <Button asChild>
+                <Link href="/signup">
+                  Sign Up <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
               </Button>
-              <Button variant="link">Know More</Button>
+              <Button variant="link" asChild>
+                <Link href="#">Know More</Link>
+              </Button>
             </CardFooter>
           </Card>
 
@@ -65,10 +71,14 @@ export function Disruption() {
               </p>
             </CardContent>
             <CardFooter>
-              <Button>
-                Sign Up <ArrowRight className="ml-2 w-4 h-4" />
+              <Button asChild>
+                <Link href="/signup">
+                  Sign Up <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
               </Button>
-              <Button variant="link">Know More</Button>
+              <Button variant="link" asChild>
+                <Link href="#">Know More</Link>
+              </Button>
             </CardFooter>
             <div className="absolute right-4 top-1/2 -translate-y-1/2">
               <Button

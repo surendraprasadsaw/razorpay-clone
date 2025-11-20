@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -18,6 +19,7 @@ import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
 
 export function PoweringEveryIndustry() {
   const [activeTab, setActiveTab] = useState('E-Commerce');
@@ -144,8 +146,10 @@ export function PoweringEveryIndustry() {
                   ))}
                   <span className="text-sm">+ 70,000 others</span>
                 </div>
-                <Button size="lg">
-                  See Solutions <ArrowRight className="ml-2 w-4 h-4" />
+                <Button size="lg" asChild>
+                  <Link href="#">
+                    See Solutions <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
                 </Button>
               </div>
             </div>

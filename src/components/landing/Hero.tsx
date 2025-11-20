@@ -1,3 +1,4 @@
+
 'use client';
 
 import {
@@ -20,7 +21,7 @@ import {
   Search,
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import type { EmblaCarouselType, EmblaPluginType } from 'embla-carousel-react';
+import type { EmblaCarouselType } from 'embla-carousel-react';
 import { useCallback, useEffect, useState } from 'react';
 
 const heroSlides = [
@@ -63,7 +64,7 @@ const products = [
 ];
 
 export function Hero() {
-  const [emblaRef, emblaApi] = useState<EmblaCarouselType | null>(null);
+  const [emblaApi, setEmblaApi] = useState<EmblaCarouselType | null>(null);
 
   const TWEEN_FACTOR = 1.2;
 
@@ -74,7 +75,7 @@ export function Hero() {
   }, []);
 
   const tweenOpacity = useCallback(
-    (emblaApi: EmblaCarouselType, eventName?: EmblaCarouselType['eventName']) => {
+    (emblaApi: EmblaCarouselType) => {
       if (!emblaApi) return;
       setTweenFactor(emblaApi);
       const engine = emblaApi.internalEngine();
@@ -113,13 +114,13 @@ export function Hero() {
     emblaApi
       .on('scroll', tweenOpacity)
       .on('reInit', setTweenFactor)
-      .on('resize', setTweenFactor)
+      .on('resize', setTweenFactor);
   }, [emblaApi, tweenOpacity, setTweenFactor]);
 
   return (
     <section className="relative bg-background overflow-hidden py-20">
       <Carousel
-        setApi={emblaApi}
+        setApi={setEmblaApi}
         opts={{
           loop: true,
         }}
