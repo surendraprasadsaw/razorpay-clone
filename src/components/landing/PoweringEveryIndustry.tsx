@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -26,6 +27,7 @@ export function PoweringEveryIndustry() {
 
   const poweringEcommerceImage = PlaceHolderImages.find((p) => p.id === 'powering-ecommerce');
   const poweringEducationImage = PlaceHolderImages.find((p) => p.id === 'powering-education');
+  const poweringBfsiImage = PlaceHolderImages.find((p) => p.id === 'powering-bfsi');
 
 
   const industries = [
@@ -97,6 +99,21 @@ export function PoweringEveryIndustry() {
     { name: 'NIIT', logo: <span className="font-bold text-lg">NIIT</span> },
     { name: 'toppr', logo: <span className="font-bold text-lg">toppr</span> },
     { name: 'Great Learning', logo: <span className="text-lg flex items-center gap-1"><span className="font-bold text-xl">G</span>Great Learning</span> },
+  ];
+  
+    const bfsiClientLogos = [
+    { name: 'ClearTax', logo: <span className="font-sans text-lg font-semibold">Clear<span className="font-light">Tax</span></span> },
+    { name: 'CRED', logo: (
+      <svg fill="currentColor" viewBox="0 0 24 24" className="h-5 w-auto">
+        <path d="M6.653 16.397h10.694c.37 0 .685-.157.915-.47.23-.314.288-.7.173-1.129l-1.718-6.39a1.23 1.23 0 0 0-1.16-.908H9.442a1.23 1.23 0 0 0-1.16.908l-1.717 6.39c-.115.43-.058.815.172 1.13.23.313.545.47.916.47zm-1.92-7.513c.219-.812.8-1.405 1.58-1.57l.1-.013h5.17c.78.165 1.361.758 1.58 1.57l.083.336H4.816l.001-.001.033-.122zM4.17 17.526c-.02-.01-.04-.02-.06-.033a1.86 1.86 0 0 1-.842-1.62c-.115-.429-.058-.814.172-1.129L5.158 8.354c.48-1.785 2.1-3.094 3.96-3.322l.19-.017h5.385c1.86.228 3.48 1.537 3.96 3.322l1.717 6.39c.23.315.287.7.172 1.129a1.86 1.86 0 0 1-.902 1.654l-.06.032H4.17z"/>
+      </svg>
+    )},
+    { name: 'ACKO', logo: (
+      <svg fill="currentColor" viewBox="0 0 64 18" className="h-5 w-auto">
+         <path d="M12.42 18L6.2 9.01 0 18h2.3l2.8-4.54 1.3-2.22 1.3 2.22L10.55 18zM6.21 0l6.2 9-6.2 9-6.2-9L6.2 0zm10.48 11.2c-.37-2.68-2.9-4.7-5.58-4.7-3.1 0-5.63 2.5-5.63 5.62s2.52 5.63 5.64 5.63c2.68 0 5.2-2.02 5.58-4.7h-1.98c-.3 1.52-1.6 2.6-3.6 2.6s-3.6-1.08-3.6-2.6c0-1.5 1.53-2.6 3.6-2.6s3.32 1.07 3.6 2.6h1.97zM29.83.27V18h2V.27zm11.13 10.93c-.37-2.68-2.9-4.7-5.58-4.7-3.1 0-5.63 2.5-5.63 5.62s2.52 5.63 5.64 5.63c2.68 0 5.2-2.02 5.58-4.7h-1.98c-.3 1.52-1.6 2.6-3.6 2.6s-3.6-1.08-3.6-2.6c0-1.5 1.53-2.6 3.6-2.6s3.32 1.07 3.6 2.6h1.97zM52.2.27c3.12 0 5.63 2.5 5.63 5.6s-2.5 5.63-5.63 5.63-5.6-2.5-5.6-5.6S49.07.27 52.2.27zm0 9.25c2 0 3.6-1.63 3.6-3.62S54.2 2.28 52.2 2.28s-3.62 1.62-3.62 3.63c0 2 1.62 3.62 3.62 3.62zm10.6.9c-.37-2.68-2.9-4.7-5.58-4.7-3.1 0-5.63 2.5-5.63 5.62s2.52 5.63 5.64 5.63c2.68 0 5.2-2.02 5.58-4.7h-1.98c-.3 1.52-1.6 2.6-3.6 2.6s-3.6-1.08-3.6-2.6c0-1.5 1.53-2.6 3.6-2.6s3.32 1.07 3.6 2.6h1.97z"/>
+      </svg>
+    )},
+    { name: 'PaisaBazaar', logo: <span className="font-serif text-lg">paisabazaar<span className="text-xs">.com</span></span> },
   ];
 
   return (
@@ -216,8 +233,46 @@ export function PoweringEveryIndustry() {
             </div>
           </TabsContent>
 
+          <TabsContent value="BFSI">
+            <div className="relative rounded-lg overflow-hidden min-h-[500px] flex items-center justify-center">
+              {poweringBfsiImage && (
+                <Image
+                  src={poweringBfsiImage.imageUrl}
+                  alt="Financial services business meeting"
+                  fill
+                  className="object-cover"
+                  data-ai-hint={poweringBfsiImage.imageHint}
+                />
+              )}
+              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent" />
+
+              <div className="relative z-10 p-8 md:p-12 max-w-lg text-white">
+                <h3 className="text-3xl md:text-4xl font-bold mb-4">
+                  Payments ecosystem for<br />
+                  <span className="text-accent">financial services</span>
+                </h3>
+                <p className="text-base md:text-lg text-gray-300 mb-8">
+                  Streamline collection management, automate recurring payments, and expedite loan disbursement for a comprehensive financial solution.
+                </p>
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-4 mb-8 text-gray-300">
+                  {bfsiClientLogos.map((client) => (
+                    <div key={client.name} className="h-6 flex items-center">
+                      {client.logo}
+                    </div>
+                  ))}
+                  <span className="text-sm">+ 2800 others</span>
+                </div>
+                <Button size="lg" asChild>
+                  <Link href="#">
+                    See Solutions <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </TabsContent>
+
           {industries
-            .filter((i) => i.name !== 'E-Commerce' && i.name !== 'Education')
+            .filter((i) => i.name !== 'E-Commerce' && i.name !== 'Education' && i.name !== 'BFSI')
             .map((industry) => (
               <TabsContent key={industry.name} value={industry.name}>
                 <div className="text-center py-20 border rounded-lg flex flex-col justify-center items-center min-h-[500px]">
