@@ -28,23 +28,6 @@ export function Testimonials() {
       size: 'large',
     },
     {
-      id: 'aditya-shankar',
-      name: 'Aditya Shankar',
-      title: 'Co-founder, Doubtnut',
-      image: PlaceHolderImages.find((p) => p.id === 'testimonial-aditya'),
-      quote:
-        'The best part about Razorpay is their customer support. They are always available to help and resolve our queries.',
-      size: 'large',
-    },
-    {
-      id: 'neha-tandon',
-      name: 'Neha Tandon Sharma',
-      title: 'Founder, Isadora Life',
-      image: PlaceHolderImages.find((p) => p.id === 'testimonial-neha'),
-      quote: 'We have seen a significant increase in our conversion rates since we switched to Razorpay. Highly recommended!',
-      size: 'large',
-    },
-    {
       id: 'durlabh-rawat',
       name: 'Durlabh Rawat',
       title: 'Founder, Barosi',
