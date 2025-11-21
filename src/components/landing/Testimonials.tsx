@@ -22,10 +22,10 @@ export function Testimonials() {
       id: 'nischay-ag',
       name: 'Nischay AG',
       title: 'Co-founder, Jar',
-      image: null,
+      image: PlaceHolderImages.find((p) => p.id === 'testimonial-nischay'),
       quote:
         'RazorpayX works for most of our needs - be it our salaries, be it our compliance, be it our payments to vendors And the biggest headache of all OTPs went away.',
-      size: 'medium',
+      size: 'large',
     },
     {
       id: 'aditya-shankar',
@@ -63,8 +63,8 @@ export function Testimonials() {
   ];
 
   return (
-    <section className="py-12 md:py-20 bg-secondary/30 flex justify-center">
-  <div className="container max-w-7xl">
+    <section className="py-12 md:py-20 bg-secondary/30">
+      <div className="container max-w-7xl">
         <div className="md:flex justify-between items-center mb-12 text-center md:text-left">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-0">
             Razorpay grows with <span className="text-primary">you!</span>
@@ -76,9 +76,9 @@ export function Testimonials() {
             </Button>
           </div>
         </div>
-
-        <div className="relative">
-          <div className="flex gap-8 overflow-x-auto pb-8 -mx-4 px-4 no-scrollbar">
+      </div>
+      <div className="container max-w-7xl overflow-x-auto no-scrollbar">
+          <div className="flex gap-8 pb-8">
             {testimonials.map((testimonial) => (
               <Card
                 key={testimonial.id}
@@ -89,7 +89,7 @@ export function Testimonials() {
               >
                 <CardContent className="p-0 h-full flex flex-col">
                   {testimonial.image ? (
-                    <div className="relative h-full flex-grow">
+                    <div className="relative h-[400px] flex-grow">
                       <Image
                         src={testimonial.image.imageUrl}
                         alt={testimonial.name}
@@ -123,7 +123,6 @@ export function Testimonials() {
             ))}
           </div>
         </div>
-      </div>
       <style jsx>{`
         .no-scrollbar::-webkit-scrollbar {
           display: none;
