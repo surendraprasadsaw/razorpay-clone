@@ -19,18 +19,20 @@ export function AllInOnePlatform() {
         <br className="hidden sm:block" />
         you've been looking for
       </h2>
-      <div className="mt-8 flex items-center justify-center flex-wrap gap-x-4 sm:gap-x-6 gap-y-2 text-muted-foreground">
-        <span className="w-full sm:w-auto mb-2 sm:mb-0">With Razorpay, you can:</span>
+      <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-x-4 sm:gap-x-6 gap-y-2 text-muted-foreground">
+        <span className="mb-2 sm:mb-0">With Razorpay, you can:</span>
         <div className="h-6 border-l border-border hidden sm:block"></div>
-        {links.map((link) => (
-          <Link
-            key={link.name}
-            href={link.href}
-            className="font-medium text-primary hover:underline text-sm sm:text-base"
-          >
-            {link.name}
-          </Link>
-        ))}
+        <div className="flex flex-wrap items-center justify-center gap-x-4 sm:gap-x-6 gap-y-2">
+            {links.map((link) => (
+            <Link
+                key={link.name}
+                href={link.href}
+                className="font-medium text-primary hover:underline text-sm sm:text-base"
+            >
+                {link.name}
+            </Link>
+            ))}
+        </div>
       </div>
     </div>
   );
