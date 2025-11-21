@@ -15,7 +15,7 @@
     {
       "id": "feature-fast",
       "description": "Icon-like image for speed feature",
-      "imageUrl": "https://images.unsplash.com/photo-1671163377628-a1542b9de075?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmYXN0JTIwcm9ja2V0fGVufDB8fHx8MTc2MzU1NzA0N3ww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1671163377628-a1542b9de075?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmYXN0JTIwcm9ja2V0fGVufDB8fHx8MTc2MzU1NzA0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "fast rocket"
     },
     {
@@ -27,7 +27,7 @@
     {
       "id": "hero-carousel-1",
       "description": "Portrait of a founder for a carousel slide",
-      "imageUrl": "https://images.unsplash.com/photo-1659353221237-6a1cfb73fd90?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWxlJTIwZm91bmRlcnxlbnwwfHx8fDE3NjM1NTc3Mzd8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1659353221237-6a1cfb73fd90?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWxlJTIwZm91bmRlcnxlbnwwfHx8fDE3NjM1NTc3Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "male founder"
     },
     {
@@ -57,13 +57,13 @@
     {
       "id": "hero-card-3",
       "description": "UI card for global payments",
-      "imageUrl": "https://images.unsplash.com/photo-1615775036480-f0cff4e2ff6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwYXltZW50cyUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NjM1NTc3Mzd8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1615775036480-f0cff4e2ff6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwYXltZW50cyUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NjM1NTc3Mzd8MA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "payments dashboard"
     },
     {
       "id": "international-payments",
       "description": "Globe with money for international payments section",
-      "imageUrl": "https://images.unsplash.com/photo-1643340464738-7a0e112b1c9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxnb2xkZW4lMjBnbG9iZSUyMG1vbmV5fGVufDB8fHx8MTc2MzcyMDk5M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1641457379940-2a6530925721?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnb2xkZW4lMjBnbG9iZSUyMG1vbmV5fGVufDB8fHx8MTc2MzcyMDk5M3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "golden globe money"
     },
     {
@@ -75,8 +75,8 @@
     {
       "id": "payment-button",
       "description": "Image showing a pay now button on a website",
-      "imageUrl": "https://images.unsplash.com/photo-1557825835-b4527f242522?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYXklMjBub3clMjBidXR0b258ZW58MHx8fHwxNzY2MDczNTE2fDA&ixlib.rb-4.1.0&q=80&w=1080",
-      "imageHint": "pay now button"
+      "imageUrl": "https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwb3R0ZWQlMjBwbGFudHxlbnwwfHx8fDE3NjM3MDQ1MjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "potted plant"
     },
     {
       "id": "payment-links",

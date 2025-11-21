@@ -114,20 +114,6 @@ export function AcceptPayments() {
       description: 'Effortlessly add a Pay Now button without any coding required.',
       image: PlaceHolderImages.find((p) => p.id === 'payment-button'),
       badge: 'NO CODE',
-      actions: (
-        <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-2">
-          <Button asChild>
-             <Link href="/signup">
-                Sign up Now <ArrowRight className="ml-2 w-4 h-4" />
-             </Link>
-          </Button>
-          <Button variant="link" asChild>
-             <Link href="#">
-                Know More
-             </Link>
-          </Button>
-        </div>
-      ),
     },
     {
       id: 'payment-links',
@@ -211,9 +197,7 @@ export function AcceptPayments() {
                     <p className="text-muted-foreground text-xs mb-3 flex-grow">
                       {product.description}
                     </p>
-                    {product.actions ? (
-                      <div className="mt-auto flex justify-center w-full">{product.actions}</div>
-                    ) : product.content ? (
+                    {product.content ? (
                       <div className="mt-auto -mx-4 -mb-4 border-t w-full">{product.content}</div>
                     ) : (
                       <div className="mt-auto">
