@@ -198,7 +198,7 @@ export function Footer() {
   return (
     <footer className="bg-background text-foreground border-t">
       <div className="container py-12 md:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 justify-center">
           <div className="md:col-span-12 lg:col-span-3">
             <Logo />
             <p className="text-xs text-muted-foreground mt-4">
@@ -310,7 +310,7 @@ export function Footer() {
                 </div>
               ))}
           </div>
-          <div className="md:col-span-6 lg:col-span-3">
+          <div className="md:col-span-6 lg:col-span-2">
              {linkColumns4.map((col) => (
                 <div key={col.title} className={col.className}>
                   <h4 className="font-semibold text-sm text-muted-foreground mb-2">
@@ -328,22 +328,18 @@ export function Footer() {
                 </div>
               ))}
           </div>
-
         </div>
         <hr className="my-8 border-border" />
         <div className="text-center">
             <p className="text-xs text-muted-foreground">
                 © Razorpay 2025 All Rights Reserved
             </p>
-            <p className="text-xs text-muted-foreground mt-2">
-                Razorpay Software Limited (formerly known as Razorpay Software Private Limited) is an RBI Authorised Online Payment Aggregator
-            </p>
         </div>
       </div>
-       <div className="border-t border-border mt-4">
+       <div className="border-t border-border">
         <div className="container py-3">
           <p className="text-xs text-muted-foreground text-center">
-            Payment aggregation services provided by Razorpay Software Limited (formerly known as Razorpay Software Private Limited) -
+            Razorpay Software Limited (formerly known as Razorpay Software Private Limited) is an RBI Authorised Online Payment Aggregator
           </p>
         </div>
       </div>
