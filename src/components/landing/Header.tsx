@@ -5,6 +5,7 @@ import { Button } from '../ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
 import { Menu } from 'lucide-react';
 import { useState } from 'react';
+import { AuthButton } from '../auth/AuthButton';
 
 export function Header() {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
@@ -37,6 +38,9 @@ export function Header() {
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-2">
+           <div className="hidden md:flex">
+             <AuthButton />
+           </div>
           <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="md:hidden">
@@ -61,6 +65,9 @@ export function Header() {
                     </Link>
                   ))}
                 </nav>
+                 <div className="mt-8">
+                    <AuthButton />
+                </div>
               </div>
             </SheetContent>
           </Sheet>
