@@ -33,127 +33,127 @@
     {
       "id": "hero-carousel-2",
       "description": "Portrait of a CEO for a carousel slide",
-      "imageUrl": "https://images.unsplash.com/photo-1600275669439-14e40452d20b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmZW1hbGUlMjBjZW98ZW58MHx8fHwxNzYzNTU3NzM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1600275669439-14e40452d20b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmZW1hbGUlMjBjZW98ZW58MHx8fHwxNzYzNTU3NzM3fDA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "female ceo"
     },
     {
       "id": "hero-carousel-3",
       "description": "Portrait of a founder for a carousel slide",
-      "imageUrl": "https://images.unsplash.com/photo-1600878459108-617a253537e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWxlJTIwZW50cmVwcmVuZXVyfGVufDB8fHx8MTc2MzU1NzczN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1600878459108-617a253537e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWxlJTIwZW50cmVwcmVuZXVyfGVufDB8fHx8MTc2MzU1NzczN3ww&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "male entrepreneur"
     },
     {
       "id": "hero-card-1",
       "description": "UI card for current account",
-      "imageUrl": "https://images.unsplash.com/photo-1742997734865-71d10c491be5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx1aSUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NjM1NTc3Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1742997734865-71d10c491be5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx1aSUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NjM1NTc3Mzd8MA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "ui dashboard"
     },
     {
       "id": "hero-card-2",
       "description": "UI card for payroll",
-      "imageUrl": "https://images.unsplash.com/photo-1643455464171-aaaaa1042fc8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwYXlyb2xsJTIwaW50ZXJmYWNlfGVufDB8fHx8MTc2NTQ2MDIxOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1643455464171-aaaaa1042fc8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwYXlyb2xsJTIwaW50ZXJmYWNlfGVufDB8fHx8MTc2NTQ2MDIxOHww&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "payroll interface"
     },
     {
       "id": "hero-card-3",
       "description": "UI card for global payments",
-      "imageUrl": "https://images.unsplash.com/photo-1615775036480-f0cff4e2ff6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwYXltZW50cyUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NjM1NTc3Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1615775036480-f0cff4e2ff6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwYXltZW50cyUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NjM1NTc3Mzd8MA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "payments dashboard"
     },
     {
       "id": "international-payments",
       "description": "Globe with money for international payments section",
-      "imageUrl": "https://images.unsplash.com/photo-1614028674022-3c811738722a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxnb2xkZW4lMjBnbG9iZSUyMG1vbmV5fGVufDB8fHx8MTc2NTM2MjczMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1614028674022-3c811738722a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxnb2xkZW4lMjBnbG9iZSUyMG1vbmV5fGVufDB8fHx8MTc2NTM2MjczMXww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "golden globe money"
     },
     {
       "id": "payment-gateway",
       "description": "Abstract image representing a payment gateway interface",
-      "imageUrl": "https://images.unsplash.com/photo-1696204568132-709559a463c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx1aSUyMHBheW1lbnR8ZW58MHx8fHwxNzY1NDYwMTk0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1696204568132-709559a463c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx1aSUyMHBheW1lbnR8ZW58MHx8fHwxNzY1NDYwMTk0fDA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "ui payment"
     },
     {
       "id": "payment-button",
       "description": "Image showing a pay now button on a website",
-      "imageUrl": "https://images.unsplash.com/photo-1557825835-b4527f242522?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYXklMjBub3clMjBidXR0b258ZW58MHx8fHwxNzY2MDczNTE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1557825835-b4527f242522?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYXklMjBub3clMjBidXR0b258ZW58MHx8fHwxNzY2MDczNTE2fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "pay now button"
     },
     {
       "id": "payment-links",
       "description": "A woman smiling while looking at her phone.",
-      "imageUrl": "https://images.unsplash.com/photo-1653762383085-0e24b0da8285?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3b21hbiUyMHBob25lfGVufDB8fHx8MTc2MzQ5NjQwNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1653762383085-0e24b0da8285?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3b21hbiUyMHBob25lfGVufDB8fHx8MTc2MzQ5NjQwNXww&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "woman phone"
     },
     {
       "id": "razorpay-pos",
       "description": "A hand holding a point-of-sale (POS) terminal.",
-      "imageUrl": "https://images.unsplash.com/photo-1706827183359-6b015aaad56c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwb3MlMjB0ZXJtaW5hbHxlbnwwfHx8fDE3NjM2MDU5Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1706827183359-6b015aaad56c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwb3MlMjB0ZXJtaW5hbHxlbnwwfHx8fDE3NjM2MDU5Mzd8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "pos terminal"
     },
     {
       "id": "powering-ecommerce",
       "description": "A man at a desk packing boxes for his e-commerce business.",
-      "imageUrl": "https://images.unsplash.com/photo-1616401784845-180862580913?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjBidXNpbmVzc3xlbnwwfHx8fDE3NjU1MzMxNTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1616401784845-180862580913?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjBidXNpbmVzc3xlbnwwfHx8fDE3NjU1MzMxNTZ8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "ecommerce business"
     },
     {
       "id": "powering-education",
       "description": "A teacher in a classroom with young students.",
-      "imageUrl": "https://images.unsplash.com/photo-1577896851231-70ef18881754?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjbGFzc3Jvb20lMjB0ZWFjaGVyfGVufDB8fHx8MTc2NjEzOTU3Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1577896851231-70ef18881754?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjbGFzc3Jvb20lMjB0ZWFjaGVyfGVufDB8fHx8MTc2NjEzOTU3Nnww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "classroom teacher"
     },
     {
       "id": "powering-bfsi",
       "description": "Two colleagues in a business meeting looking at a laptop.",
-      "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1lZXRpbmd8ZW58MHx8fHwxNzY4Nzg3MjUxfDA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1lZXRpbmd8ZW58MHx8fHwxNzY4Nzg3MjUxfDA&ixlib-rb-4.0.3&q=80&w=1080",
       "imageHint": "business meeting"
     },
     {
       "id": "powering-saas",
       "description": "A man smiling at his phone while working on a laptop in a cafe.",
-      "imageUrl": "https://images.unsplash.com/photo-1611095790444-1dfa35e37b52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYW4lMjBsYXB0b3AlMjBwaG9uZXxlbnwwfHx8fDE3NjkwOTU4ODV8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1611095790444-1dfa35e37b52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYW4lMjBsYXB0b3AlMjBwaG9uZXxlbnwwfHx8fDE3NjkwOTU4ODV8MA&ixlib-rb-4.0.3&q=80&w=1080",
       "imageHint": "man laptop phone"
     },
     {
       "id": "powering-freelancer",
       "description": "A woman working at her desk with a laptop and notebook.",
-      "imageUrl": "https://images.unsplash.com/photo-1590650153855-f488e8369e0e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMGF0JTIwZGVza3xlbnwwfHx8fDE3NjkyNjgyMDV8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1590650153855-f488e8369e0e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMGF0JTIwZGVza3xlbnwwfHx8fDE3NjkyNjgyMDV8MA&ixlib-rb-4.0.3&q=80&w=1080",
       "imageHint": "woman desk"
     },
     {
       "id": "testimonial-anusree",
       "description": "Portrait of Anusree Goenka",
-      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjB3b21hbiUyMHByb2ZpbGV8ZW58MHx8fHwxNzY1OTg0MDUyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjB3b21hbiUyMHByb2ZpbGV8ZW58MHx8fHwxNzY1OTg0MDUyfDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "indian woman profile"
     },
     {
       "id": "testimonial-nischay",
       "description": "Portrait of Nischay AG",
-      "imageUrl": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxpbmRpYW4lMjBtYW4lMjBwcm9maWxlfGVufDB8fHx8MTc2NTk4NDA1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxpbmRpYW4lMjBtYW4lMjBwcm9maWxlfGVufDB8fHx8MTc2NTk4NDA1Mnww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "indian man profile"
     },
     {
       "id": "testimonial-aditya",
       "description": "Portrait of Aditya Shankar",
-      "imageUrl": "https://images.unsplash.com/photo-1608357874738-95a6a5754556?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBtYW4lMjBwcm9maWxlfGVufDB8fHx8MTc2NTk4NDA1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1608357874738-95a6a5754556?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBtYW4lMjBwcm9maWxlfGVufDB8fHx8MTc2NTk4NDA1Mnww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "indian man profile"
     },
     {
       "id": "testimonial-neha",
       "description": "Portrait of Neha Tandon Sharma",
-      "imageUrl": "https://images.unsplash.com/photo-1594837861998-333a042e5843?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxpbmRpYW4lMjB3b21hbiUyMHByb2ZpbGV8ZW58MHx8fHwxNzY1OTg0MDUyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1594837861998-333a042e5843?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxpbmRpYW4lMjB3b21hbiUyMHByb2ZpbGV8ZW58MHx8fHwxNzY1OTg0MDUyfDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "indian woman profile"
     },
     {
       "id": "testimonial-durlabh",
       "description": "Portrait of Durlabh Rawat",
-      "imageUrl": "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxpbmRpYW4lMjBtYW4lMjBwcm9maWxlfGVufDB8fHx8MTc2NTk4NDA1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxpbmRpYW4lMjBtYW4lMjBwcm9maWxlfGVufDB8fHx8MTc2NTk4NDA1Mnww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "indian man profile"
     },
     {
       "id": "testimonial-nikita",
       "description": "Portrait of Nikita Gujral",
-      "imageUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxpbmRpYW4lMjB3b21hbiUyMHByb2ZpbGV8ZW58MHx8fHwxNzY1OTg0MDUyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxpbmRpYW4lMjB3b21hbiUyMHByb2ZpbGV8ZW58MHx8fHwxNzY1OTg0MDUyfDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "indian woman profile"
     }
   ]
