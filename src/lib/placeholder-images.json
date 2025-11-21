@@ -27,7 +27,7 @@
     {
       "id": "hero-carousel-1",
       "description": "Portrait of a founder for a carousel slide",
-      "imageUrl": "https://images.unsplash.com/photo-1659353221237-6a1cfb73fd90?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWxlJTIwZm91bmRlcnxlbnwwfHx8fDE3NjM1NTc3Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1659353221237-6a1cfb73fd90?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWxlJTIwZm91bmRlcnxlbnwwfHx8fDE3NjM1NTc3Mzd8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "male founder"
     },
     {
@@ -57,13 +57,13 @@
     {
       "id": "hero-card-3",
       "description": "UI card for global payments",
-      "imageUrl": "https://images.unsplash.com/photo-1615775036480-f0cff4e2ff6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwYXltZW50cyUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NjM1NTc3Mzd8MA&ixlib.rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1615775036480-f0cff4e2ff6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwYXltZW50cyUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NjM1NTc3Mzd8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "payments dashboard"
     },
     {
       "id": "international-payments",
       "description": "Globe with money for international payments section",
-      "imageUrl": "https://images.unsplash.com/photo-1614028674022-3c811738722a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxnb2xkZW4lMjBnbG9iZSUyMG1vbmV5fGVufDB8fHx8MTc2NTM2MjczMXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1643340464738-7a0e112b1c9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxnb2xkZW4lMjBnbG9iZSUyMG1vbmV5fGVufDB8fHx8MTc2MzcyMDk5M3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "golden globe money"
     },
     {
@@ -87,13 +87,13 @@
     {
       "id": "razorpay-pos",
       "description": "A hand holding a point-of-sale (POS) terminal.",
-      "imageUrl": "https://images.unsplash.com/photo-1706827183359-6b015aaad56c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwb3MlMjB0ZXJtaW5hbHxlbnwwfHx8fDE3NjM2MDU5Mzd8MA&ixlib.rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1706827183359-6b015aaad56c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwb3MlMjB0ZXJtaW5hbHxlbnwwfHx8fDE3NjM2MDU5Mzd8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "pos terminal"
     },
     {
       "id": "powering-ecommerce",
       "description": "A man at a desk packing boxes for his e-commerce business.",
-      "imageUrl": "https://images.unsplash.com/photo-1616401784845-180862580913?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjBidXNpbmVzc3xlbnwwfHx8fDE3NjU1MzMxNTZ8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1616401784845-180862580913?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjBidXNpbmVzc3xlbnwwfHx8fDE3NjU1MzMxNTZ8MA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "ecommerce business"
     },
     {
