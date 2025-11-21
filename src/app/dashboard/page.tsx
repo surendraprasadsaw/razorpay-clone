@@ -12,11 +12,12 @@ import {
 } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { useAuth } from '@/hooks/useAuth';
 
 export default function DashboardPage() {
   const [amount, setAmount] = useState(10);
-  const { user } = useAuth(); // This will be null or a mock user now
+  
+  // The user object is no longer available since authentication was removed.
+  const user = null; 
 
   return (
     <div className="flex justify-center items-start pt-10">
