@@ -199,7 +199,7 @@ const linkColumns4 = [
 export function Footer() {
   return (
     <footer className="bg-background text-foreground/80 border-t">
-      <div className="container py-16 text-sm">
+      <div className="w-[60%] mx-auto py-16 text-sm">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             <div className="lg:col-span-3 space-y-6 lg:pl-8">
                 
@@ -320,7 +320,7 @@ export function Footer() {
         </div>
       </div>
        <div className="border-t border-border">
-        <div className="container py-4 text-left grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+        <div className="w-[60%] mx-auto py-4 text-left grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
             <p className="text-xs text-muted-foreground">
                 © Razorpay 2025 All Rights Reserved
             </p>
@@ -332,5 +332,3 @@ export function Footer() {
     </footer>
   );
 }
-
-    
