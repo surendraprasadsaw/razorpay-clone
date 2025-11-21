@@ -35,15 +35,47 @@ export function AcceptPayments() {
   ];
 
   const paymentMethods = [
-    { name: 'Pay using card', icon: <CreditCard className="w-5 h-5" /> },
-    { name: 'UPI ID', icon: <span className="font-bold text-lg">▷</span> },
-    { name: 'Net banking', icon: <Laptop className="w-5 h-5" /> },
+    { name: 'Pay using card', icon: <CreditCard className="w-5 h-5 text-green-600" /> },
+    { name: 'UPI ID', icon: (
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6.73013 15.82L3.63013 12.72L6.73013 9.62001L8.15013 11.04L6.47013 12.72L8.15013 14.4L6.73013 15.82Z"
+            fill="#38A169"
+          />
+          <path
+            d="M11.92 15.5L10.5 14.08L16.86 7.72001H14.1V5.80001H20.4V12.1H18.48V9.38001L11.92 15.5Z"
+            fill="#38A169"
+          />
+        </svg>
+      )
+    },
+    { name: 'Net banking', icon: (
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M2 20H22V22H2V20ZM4 10H8V17H4V10ZM10 10H14V17H10V10ZM22 8.5L12 3L2 8.5V9.5H22V8.5ZM16 10H20V17H16V10Z"
+            fill="#38A169"
+          />
+        </svg>
+      )
+    },
     {
       name: 'EMI',
-      icon: <CreditCard className="w-5 h-5" />,
+      icon: <CreditCard className="w-5 h-5 text-green-600" />,
       tag: 'NO COST EMI AVAILABLE',
     },
-    { name: 'Wallet', icon: <Wallet className="w-5 h-5" /> },
+    { name: 'Wallet', icon: <Wallet className="w-5 h-5 text-green-600" /> },
   ];
 
   const products = [
@@ -55,16 +87,16 @@ export function AcceptPayments() {
       content: (
         <>
           <div className="p-4 space-y-3">
-            {paymentMethods.map((method) => (
+            {paymentMethods.map((method, index) => (
               <div
                 key={method.name}
-                className="flex items-center justify-between p-3 rounded-md bg-background"
+                className={cn("flex items-center justify-between p-3 rounded-md bg-background", index === 1 ? "bg-blue-50 dark:bg-blue-900/20" : "")}
               >
                 <div className="flex items-center gap-3">
                   {method.icon}
-                  <span className="font-medium">{method.name}</span>
+                  <span className="font-medium text-sm">{method.name}</span>
                   {method.tag && (
-                    <span className="text-xs font-bold text-green-600 bg-green-100 px-2 py-0.5 rounded">
+                    <span className="text-xs font-bold text-green-800 bg-green-100 px-2 py-0.5 rounded-sm">
                       {method.tag}
                     </span>
                   )}
