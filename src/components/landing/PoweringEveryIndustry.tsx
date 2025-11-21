@@ -139,7 +139,7 @@ export function PoweringEveryIndustry() {
             ))}
           </TabsList>
           <TabsContent value="E-Commerce">
-            <div className="relative rounded-lg overflow-hidden min-h-[500px] flex items-center">
+            <div className="relative rounded-lg overflow-hidden min-h-[500px] flex items-center justify-center">
               {poweringEcommerceImage && (
                 <Image
                   src={poweringEcommerceImage.imageUrl}
@@ -179,7 +179,7 @@ export function PoweringEveryIndustry() {
           </TabsContent>
 
           <TabsContent value="Education">
-            <div className="relative rounded-lg overflow-hidden min-h-[500px] flex items-center">
+            <div className="relative rounded-lg overflow-hidden min-h-[500px] flex items-center justify-center">
               {poweringEducationImage && (
                 <Image
                   src={poweringEducationImage.imageUrl}
