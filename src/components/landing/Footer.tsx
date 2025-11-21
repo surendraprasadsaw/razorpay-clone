@@ -1,7 +1,6 @@
 
 import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 import Link from 'next/link';
-import { Logo } from '../Logo';
 
 const PciDssLogo = () => (
   <svg
@@ -203,7 +202,7 @@ export function Footer() {
       <div className="container py-16 text-sm">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             <div className="lg:col-span-3 space-y-6">
-                <Logo />
+                
                 <p>
                     Razorpay is the only payments solution in India that allows businesses to accept, process and disburse payments with its product suite. It gives you access to all payment modes including credit card, debit card, netbanking, UPI and popular wallets including JioMoney, Mobikwik, Airtel Money, FreeCharge, Ola Money and PayZapp.
                 </p>
