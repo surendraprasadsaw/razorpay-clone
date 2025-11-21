@@ -197,45 +197,10 @@ const linkColumns4 = [
 export function Footer() {
   return (
     <footer className="bg-background text-foreground border-t">
-      <div className="container py-12 md:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 justify-center">
-          <div className="md:col-span-12 lg:col-span-3">
-            <p className="text-xs text-muted-foreground mt-4">
-              Razorpay is the only payments solution in India that allows
-              businesses to accept, process and disburse payments with its
-              product suite. It gives you access to all payment modes including
-              credit card, debit card, netbanking, UPI and popular wallets
-              including JioMoney, Mobikwik, Airtel Money, FreeCharge, Ola Money
-              and PayZapp.
-            </p>
-            <p className="text-xs text-muted-foreground mt-4">
-              RazorpayX supercharges your business banking experience, bringing
-              effectiveness, efficiency, and excellence to all financial
-              processes. With RazorpayX, businesses can get access to
-              fully-functional current accounts, supercharge their payouts and
-              automate payroll compliance.
-            </p>
-            <p className="text-xs text-muted-foreground mt-4">
-              Manage your marketplace, automate bank transfers, collect
-              recurring payments, share invoices with customers and avail
-              working capital loans - all from a single platform. Fast forward
-              your business with Razorpay.
-            </p>
-            <p className="text-xs text-muted-foreground mt-4">
-              Disclaimer: The RazorpayX powered Current Account and VISA
-              corporate credit card are provided by RBI licensed banks. Your
-              RazorpayX powered current account is provided by our partner banks
-              i.e, ICICI, RBL, Yes bank, in accordance with RBI regulations.
-              RazorpayX itself is not a bank and doesn't hold or claim to hold a
-              banking license.
-            </p>
-            <div className="flex items-center space-x-4 mt-6">
-              <PciDssLogo />
-              <SocLogo />
-            </div>
-          </div>
-          <div className="md:col-span-6 lg:col-span-2">
-            {linkColumns.map((col) => (
+      <div className="container py-16 md:py-24 text-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="space-y-4">
+            {linkColumns.slice(0, 1).map((col) => (
               <div key={col.title} className={col.className}>
                 <h4 className="font-semibold text-sm text-muted-foreground mb-2">
                   {col.title}
@@ -243,7 +208,7 @@ export function Footer() {
                 <ul className="space-y-2">
                   {col.links.map((link) => (
                     <li key={link.text}>
-                      <Link href="#" className="text-sm text-primary hover:underline flex items-center">
+                      <Link href="#" className="text-sm text-primary hover:underline flex items-center justify-center">
                         {link.text}
                         {link.new && (
                           <span className="ml-2 text-xs bg-green-200 text-green-800 font-bold px-2 py-0.5 rounded-full">
@@ -257,8 +222,8 @@ export function Footer() {
               </div>
             ))}
           </div>
-          <div className="md:col-span-6 lg:col-span-2">
-             {linkColumns2.map((col) => (
+          <div className="space-y-4">
+            {linkColumns2.map((col) => (
               <div key={col.title} className={col.className}>
                 <h4 className="font-semibold text-sm text-muted-foreground mb-2">
                   {col.title}
@@ -274,24 +239,8 @@ export function Footer() {
                 </ul>
               </div>
             ))}
-            <div className="mt-6">
-               <h4 className="font-semibold text-sm text-muted-foreground mb-2">FIND US ONLINE</h4>
-               <div className="flex space-x-2">
-                  <Link href="#" className="text-primary hover:opacity-80"><Facebook size={20} /></Link>
-                  <Link href="#" className="text-primary hover:opacity-80"><Twitter size={20} /></Link>
-                  <Link href="#" className="text-primary hover:opacity-80"><Instagram size={20} /></Link>
-                  <Link href="#" className="text-primary hover:opacity-80"><Linkedin size={20} /></Link>
-               </div>
-            </div>
-             <div className="mt-6">
-                <h4 className="font-semibold text-sm text-muted-foreground mb-2">REGD. OFFICE ADDRESS</h4>
-                <p className="text-xs text-muted-foreground">
-                  Razorpay Software Limited, 1st Floor, SJR Cyber, 22 Laskar Hosur Road, Adugodi, Bengaluru, 560030, Karnataka, India <br />
-                  CIN: U72200KA2013PLC097389
-                </p>
-             </div>
           </div>
-          <div className="md:col-span-6 lg:col-span-2">
+          <div className="space-y-4">
             {linkColumns3.map((col) => (
                 <div key={col.title} className={col.className}>
                   <h4 className="font-semibold text-sm text-muted-foreground mb-2">
@@ -309,7 +258,7 @@ export function Footer() {
                 </div>
               ))}
           </div>
-          <div className="md:col-span-6 lg:col-span-2">
+          <div className="space-y-4">
              {linkColumns4.map((col) => (
                 <div key={col.title} className={col.className}>
                   <h4 className="font-semibold text-sm text-muted-foreground mb-2">
@@ -328,7 +277,69 @@ export function Footer() {
               ))}
           </div>
         </div>
+
+        <hr className="my-12 border-border" />
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+                 <h4 className="font-semibold text-sm text-muted-foreground mb-2">FIND US ONLINE</h4>
+                 <div className="flex space-x-2 justify-center">
+                    <Link href="#" className="text-primary hover:opacity-80"><Facebook size={20} /></Link>
+                    <Link href="#" className="text-primary hover:opacity-80"><Twitter size={20} /></Link>
+                    <Link href="#" className="text-primary hover:opacity-80"><Instagram size={20} /></Link>
+                    <Link href="#" className="text-primary hover:opacity-80"><Linkedin size={20} /></Link>
+                 </div>
+            </div>
+            <div>
+              <h4 className="font-semibold text-sm text-muted-foreground mb-2">REGD. OFFICE ADDRESS</h4>
+              <p className="text-xs text-muted-foreground">
+                Razorpay Software Limited, 1st Floor, SJR Cyber, 22 Laskar Hosur Road, Adugodi, Bengaluru, 560030, Karnataka, India <br />
+                CIN: U72200KA2013PLC097389
+              </p>
+            </div>
+        </div>
+
+        <hr className="my-12 border-border" />
+
+        <div className="space-y-4">
+          <p className="text-xs text-muted-foreground">
+            Razorpay is the only payments solution in India that allows
+            businesses to accept, process and disburse payments with its
+            product suite. It gives you access to all payment modes including
+            credit card, debit card, netbanking, UPI and popular wallets
+            including JioMoney, Mobikwik, Airtel Money, FreeCharge, Ola Money
+            and PayZapp.
+          </p>
+          <p className="text-xs text-muted-foreground">
+            RazorpayX supercharges your business banking experience, bringing
+            effectiveness, efficiency, and excellence to all financial
+            processes. With RazorpayX, businesses can get access to
+            fully-functional current accounts, supercharge their payouts and
+            automate payroll compliance.
+          </p>
+          <p className="text-xs text-muted-foreground">
+            Manage your marketplace, automate bank transfers, collect
+            recurring payments, share invoices with customers and avail
+            working capital loans - all from a single platform. Fast forward
+            your business with Razorpay.
+          </p>
+          <p className="text-xs text-muted-foreground">
+            Disclaimer: The RazorpayX powered Current Account and VISA
+            corporate credit card are provided by RBI licensed banks. Your
+            RazorpayX powered current account is provided by our partner banks
+            i.e, ICICI, RBL, Yes bank, in accordance with RBI regulations.
+            RazorpayX itself is not a bank and doesn't hold or claim to hold a
+            banking license.
+          </p>
+        </div>
+
+        <div className="flex items-center justify-center space-x-4 mt-8">
+            <PciDssLogo />
+            <SocLogo />
+        </div>
+        
         <hr className="my-8 border-border" />
+
         <div className="text-center">
             <p className="text-xs text-muted-foreground">
                 © Razorpay 2025 All Rights Reserved
