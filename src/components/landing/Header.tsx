@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { Button } from '../ui/button';
-import { InternationalPaymentsBanner } from './InternationalPaymentsBanner';
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
 import { Menu } from 'lucide-react';
 import { useState } from 'react';
@@ -38,11 +37,6 @@ export function Header() {
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-2">
-           <div className="hidden md:flex">
-             <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
-                <Link href="#">Sign Up</Link>
-              </Button>
-          </div>
           <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="md:hidden">
@@ -67,17 +61,11 @@ export function Header() {
                     </Link>
                   ))}
                 </nav>
-                <div className="mt-8 border-t pt-6">
-                   <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 w-full">
-                    <Link href="#">Sign Up</Link>
-                  </Button>
-                </div>
               </div>
             </SheetContent>
           </Sheet>
         </div>
       </div>
-      <InternationalPaymentsBanner />
     </header>
   );
 }

@@ -4,14 +4,11 @@ import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
 } from '@/components/ui/card';
 import {
   Globe,
-  ArrowRight,
   ChevronsRight,
   ChevronRight,
 } from 'lucide-react';
@@ -44,11 +41,6 @@ export function Disruption() {
               </p>
             </CardContent>
             <CardFooter className="justify-center flex-wrap gap-2">
-              <Button asChild>
-                <Link href="/signup">
-                  Sign Up <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-              </Button>
               <Button variant="link" asChild>
                 <Link href="#">Know More</Link>
               </Button>
@@ -71,11 +63,6 @@ export function Disruption() {
               </p>
             </CardContent>
             <CardFooter className="justify-center flex-wrap gap-2">
-              <Button asChild>
-                <Link href="/signup">
-                  Sign Up <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-              </Button>
               <Button variant="link" asChild>
                 <Link href="#">Know More</Link>
               </Button>

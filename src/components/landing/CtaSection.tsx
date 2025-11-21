@@ -13,8 +13,8 @@ export function CtaSection() {
                 </h2>
                 <div className="mt-8">
                     <Button size="lg" asChild>
-                        <Link href="/signup">
-                            Sign Up Now <ArrowRight className="ml-2 w-4 h-4" />
+                        <Link href="#">
+                            Get Started <ArrowRight className="ml-2 w-4 h-4" />
                         </Link>
                     </Button>
                 </div>

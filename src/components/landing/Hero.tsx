@@ -92,8 +92,8 @@ export function Hero() {
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-2 sm:space-y-0 sm:space-x-4">
                       <Button size="lg" asChild className="bg-accent text-accent-foreground hover:bg-accent/90 w-full sm:w-auto">
-                        <Link href="/signup">
-                          Sign Up Now <ArrowRight className="ml-2 w-4 h-4" />
+                        <Link href="#">
+                          Get Started <ArrowRight className="ml-2 w-4 h-4" />
                         </Link>
                       </Button>
                       <Button size="lg" variant="link" asChild>
