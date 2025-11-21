@@ -4,33 +4,31 @@ export function Logo({ className }: { className?: string }) {
   return (
     <div className={cn('flex items-center', className)}>
       <svg
-        width="100"
-        height="30"
-        viewBox="0 0 100 30"
+        width="115"
+        height="28"
+        viewBox="0 0 115 28"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="text-foreground"
       >
-        <text
-          x="0"
-          y="22"
-          fontFamily="Arial, sans-serif"
-          fontSize="24"
-          fontWeight="bold"
-          fill="#528FF0"
-        >
-          M
-        </text>
-        <text
-          x="24"
-          y="22"
-          fontFamily="Arial, sans-serif"
-          fontSize="24"
-          fontWeight="bold"
-          fill="currentColor"
-        >
-          OHAN
-        </text>
+        <path
+          d="M23.674 5.228h-6.002L12.015 28h6.58l1.83-4.57h6.634l-1.9 4.57h6.58L23.674 5.228zm-2.88 13.63h-5.02l2.51-6.196 2.51 6.195z"
+          fill="#3B82F6"
+        ></path>
+        <path
+          d="M0 5.228h6.241v22.772H0z"
+          fill="#1E293B"
+          className="dark:fill-white"
+        ></path>
+        <path
+          d="M33.998 12.033c0-4.323 2.85-6.805 7.19-6.805 4.34 0 7.19 2.482 7.19 6.805 0 4.323-2.85 6.805-7.19 6.805-4.34 0-7.19-2.482-7.19-6.805zm9.574 0c0-2.51-1.648-4.209-4.785-4.209-3.137 0-4.785 1.699-4.785 4.21 0 2.51 1.648 4.208 4.785 4.208 3.137 0 4.785-1.7 4.785-4.209zM58.307 28h6.24V5.228h-6.24V28zM71.745 5.228h6.24v7.22l5.44-7.22h6.71l-6.103 7.844 6.485 12.7h-6.79l-3.9-8.49-2.074 2.59v5.9h-6.24V5.228zM92.17 12.033c0-4.323 2.85-6.805 7.19-6.805 4.34 0 7.19 2.482 7.19 6.805 0 4.323-2.85 6.805-7.19 6.805-4.34 0-7.19-2.482-7.19-6.805zm9.574 0c0-2.51-1.648-4.209-4.785-4.209-3.137 0-4.785 1.699-4.785 4.21 0 2.51 1.648 4.208 4.785 4.208 3.137 0 4.785-1.7 4.785-4.209z"
+          fill="#1E293B"
+          className="dark:fill-white"
+        ></path>
+        <path
+          d="M24.232 2.09L.45 28h6.513l13.59-15.655L24.232 2.09z"
+          fill="#3B82F6"
+        ></path>
       </svg>
     </div>
   );
