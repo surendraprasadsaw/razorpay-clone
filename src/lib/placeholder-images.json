@@ -15,7 +15,7 @@
     {
       "id": "feature-fast",
       "description": "Icon-like image for speed feature",
-      "imageUrl": "https://images.unsplash.com/photo-1671163377628-a1542b9de075?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmYXN0JTIwcm9ja2V0fGVufDB8fHx8MTc2MzU1NzA0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1671163377628-a1542b9de075?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmYXN0JTIwcm9ja2V0fGVufDB8fHx8MTc2MzU1NzA0N3ww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "fast rocket"
     },
     {
@@ -75,7 +75,7 @@
     {
       "id": "payment-button",
       "description": "Image showing a pay now button on a website",
-      "imageUrl": "https://images.unsplash.com/photo-1557825835-b4527f242522?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYXklMjBub3clMjBidXR0b258ZW58MHx8fHwxNzY2MDczNTE2fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1557825835-b4527f242522?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYXklMjBub3clMjBidXR0b258ZW58MHx8fHwxNzY2MDczNTE2fDA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "pay now button"
     },
     {
@@ -87,7 +87,7 @@
     {
       "id": "razorpay-pos",
       "description": "A hand holding a point-of-sale (POS) terminal.",
-      "imageUrl": "https://images.unsplash.com/photo-1706827183359-6b015aaad56c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwb3MlMjB0ZXJtaW5hbHxlbnwwfHx8fDE3NjM2MDU5Mzd8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1706827183359-6b015aaad56c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwb3MlMjB0ZXJtaW5hbHxlbnwwfHx8fDE3NjM2MDU5Mzd8MA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "pos terminal"
     },
     {

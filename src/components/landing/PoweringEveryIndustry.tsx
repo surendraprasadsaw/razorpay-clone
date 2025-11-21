@@ -29,6 +29,7 @@ export function PoweringEveryIndustry() {
   const poweringEducationImage = PlaceHolderImages.find((p) => p.id === 'powering-education');
   const poweringBfsiImage = PlaceHolderImages.find((p) => p.id === 'powering-bfsi');
   const poweringSaaSImage = PlaceHolderImages.find((p) => p.id === 'powering-saas');
+  const poweringFreelancerImage = PlaceHolderImages.find((p) => p.id === 'powering-freelancer');
 
 
   const industries = [
@@ -333,20 +334,34 @@ export function PoweringEveryIndustry() {
             </div>
           </TabsContent>
 
-          {industries
-            .filter((i) => !['E-Commerce', 'Education', 'BFSI', 'SaaS'].includes(i.name))
-            .map((industry) => (
-              <TabsContent key={industry.name} value={industry.name}>
-                <div className="text-center py-20 border rounded-lg flex flex-col justify-center items-center min-h-[500px]">
-                  <h3 className="text-2xl font-semibold">
-                    Content for {industry.name}
-                  </h3>
-                  <p className="text-muted-foreground mt-2">
-                    Details coming soon.
-                  </p>
-                </div>
-              </TabsContent>
-            ))}
+          <TabsContent value="Freelancer">
+            <div className="relative rounded-lg overflow-hidden min-h-[500px] flex items-center justify-center">
+              {poweringFreelancerImage && (
+                <Image
+                  src={poweringFreelancerImage.imageUrl}
+                  alt="Freelancer working at desk"
+                  fill
+                  className="object-cover"
+                  data-ai-hint={poweringFreelancerImage.imageHint}
+                />
+              )}
+              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent" />
+
+              <div className="relative z-10 p-8 md:p-12 max-w-lg text-white">
+                <h3 className="text-3xl md:text-4xl font-bold mb-4">
+                  The personalized payment solution for <span className="text-accent">freelancers</span>
+                </h3>
+                <p className="text-base md:text-lg text-gray-300 mb-8">
+                  Easily accept payments, even without a website and without any coding expertise, while also enabling the creation of your personalized, branded online store.
+                </p>
+                <Button size="lg" asChild>
+                  <Link href="#">
+                    See Solutions <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </TabsContent>
         </Tabs>
       </div>
     </section>
