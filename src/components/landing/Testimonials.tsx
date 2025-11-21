@@ -110,7 +110,7 @@ export function Testimonials() {
                       <blockquote className="text-lg font-medium mb-6">
                         "{testimonial.quote}"
                       </blockquote>
-                      <div>
+                      <div className="flex-grow flex flex-col items-center justify-center">
                         <p className="font-bold">{testimonial.name}</p>
                         <p className="text-sm text-muted-foreground">
                           {testimonial.title}
