@@ -33,12 +33,12 @@ export function Features() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <Card key={index} className="text-center p-6 flex flex-col justify-center items-center">
-              <CardHeader className="flex-grow flex flex-col justify-center items-center">
-                <div className="flex justify-center mb-4">{feature.icon}</div>
+            <Card key={index} className="text-left p-6 flex flex-col justify-start items-start">
+              <CardHeader className="flex-grow flex flex-col justify-start items-start p-0">
+                <div className="flex justify-start mb-4">{feature.icon}</div>
                 <CardTitle>{feature.title}</CardTitle>
               </CardHeader>
-              <CardDescription>{feature.description}</CardDescription>
+              <CardDescription className="pt-2">{feature.description}</CardDescription>
             </Card>
           ))}
         </div>
