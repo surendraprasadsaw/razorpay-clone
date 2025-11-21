@@ -63,7 +63,7 @@ export function Testimonials() {
   ];
 
   return (
-    <section className="py-12 md:py-20 bg-secondary/30">
+    <section className="py-12 md:py-20 bg-secondary/30 overflow-hidden">
       <div className="container max-w-7xl">
         <div className="md:flex justify-between items-center mb-12 text-center md:text-left">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-0">
@@ -77,13 +77,13 @@ export function Testimonials() {
           </div>
         </div>
       </div>
-      <div className="container max-w-7xl overflow-x-auto no-scrollbar">
-          <div className="flex gap-8 pb-8">
-            {testimonials.map((testimonial) => (
+      <div className="relative w-full">
+        <div className="flex animate-scroll">
+            {[...testimonials, ...testimonials].map((testimonial, index) => (
               <Card
-                key={testimonial.id}
+                key={`${testimonial.id}-${index}`}
                 className={cn(
-                  'flex-shrink-0 rounded-xl overflow-hidden group flex flex-col',
+                  'flex-shrink-0 rounded-xl overflow-hidden group flex flex-col mx-4',
                   testimonial.size === 'large' ? 'w-[300px]' : 'w-[320px]'
                 )}
               >
@@ -122,16 +122,7 @@ export function Testimonials() {
               </Card>
             ))}
           </div>
-        </div>
-      <style jsx>{`
-        .no-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-        .no-scrollbar {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-      `}</style>
+      </div>
     </section>
   );
 }
