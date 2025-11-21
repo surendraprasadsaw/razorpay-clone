@@ -26,7 +26,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <div className="mr-4 flex items-center">
-          {/* The logo was here */}
+          <Link href="/" className="font-bold text-lg">Razor Pay</Link>
         </div>
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
           {navLinks.map(link => (
@@ -53,7 +53,7 @@ export function Header() {
             <SheetContent side="left">
               <div className="p-4">
                 <div className="mb-8 block">
-                  {/* The logo was here */}
+                  <Link href="/" className="font-bold text-lg">Razor Pay</Link>
                 </div>
                 <nav className="flex flex-col space-y-4">
                   {navLinks.map(link => (
