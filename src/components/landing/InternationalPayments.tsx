@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from 'next/image';
@@ -10,7 +9,7 @@ export function InternationalPayments() {
   const image = PlaceHolderImages.find(p => p.id === 'international-payments');
 
   return (
-    <div className="container py-12 md:py-20">
+    <div className="w-[60%] mx-auto py-12 md:py-20">
       <div className="relative rounded-2xl overflow-hidden">
         {image && (
           <Image

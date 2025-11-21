@@ -13,7 +13,7 @@ export function AllInOnePlatform() {
   ];
 
   return (
-    <div className="container text-center py-12 md:py-20">
+    <div className="w-[60%] mx-auto text-center py-12 md:py-20">
       <h2 className="text-3xl md:text-5xl font-bold leading-tight">
         The all in one <span className="text-accent">finance platform</span>
         <br className="hidden sm:block" />
