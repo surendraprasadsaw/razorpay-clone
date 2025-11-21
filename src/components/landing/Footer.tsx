@@ -1,7 +1,6 @@
 
 import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 import Link from 'next/link';
-import { Logo } from '../Logo';
 
 const PciDssLogo = () => (
   <svg
@@ -201,7 +200,6 @@ export function Footer() {
       <div className="container py-12 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 justify-center">
           <div className="md:col-span-12 lg:col-span-3">
-            <Logo />
             <p className="text-xs text-muted-foreground mt-4">
               Razorpay is the only payments solution in India that allows
               businesses to accept, process and disburse payments with its
