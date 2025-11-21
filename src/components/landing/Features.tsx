@@ -22,7 +22,7 @@ export function Features() {
 
   return (
     <section className="bg-secondary py-20">
-      <div className="container">
+      <div className="w-[60%] mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold">
             Why Choose Razor Pay?
