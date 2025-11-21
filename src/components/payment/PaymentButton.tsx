@@ -1,11 +1,18 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import type { User } from 'firebase/auth';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react';
-import { cn } from '@/lib/utils';
+
+// Mock User type since firebase is removed
+type User = {
+  uid: string;
+  email: string | null;
+  displayName: string | null;
+  photoURL: string | null;
+} | null;
+
 
 export function PaymentButton({ amount, user }: { amount: number, user: User }) {
   const [isLoading, setIsLoading] = useState(false);

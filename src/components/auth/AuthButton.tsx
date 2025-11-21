@@ -12,8 +12,6 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { signOut } from 'firebase/auth';
-import { auth } from '@/lib/firebase/config';
 import { useRouter } from 'next/navigation';
 import { User as UserIcon, LogOut, LayoutDashboard } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -23,7 +21,9 @@ export function AuthButton() {
   const router = useRouter();
 
   const handleSignOut = async () => {
-    await signOut(auth);
+    // This is now a mock sign-out.
+    // In a real app, you'd clear the user state.
+    // For now, we'll just redirect to home.
     router.push('/');
   };
 

@@ -22,8 +22,6 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '@/lib/firebase/config';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Logo } from '../Logo';
@@ -45,18 +43,23 @@ export function LoginForm() {
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    // Mock login logic
+    form.clearErrors();
     try {
-      await signInWithEmailAndPassword(auth, values.email, values.password);
+      // Here you would typically call your backend.
+      // Since we removed it, we'll simulate a success.
+      console.log('Mock login attempt with:', values);
       toast({
         title: 'Success!',
-        description: "You've been logged in.",
+        description: "You've been logged in (mock).",
       });
+      // In a real app with state management, you'd set the user state here.
       router.push('/dashboard');
     } catch (error: any) {
       toast({
         variant: 'destructive',
         title: 'Uh oh! Something went wrong.',
-        description: error.message || 'There was a problem with your request.',
+        description: 'This is a mock error. Please try again.',
       });
     }
   };

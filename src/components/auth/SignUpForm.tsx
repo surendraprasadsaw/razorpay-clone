@@ -22,8 +22,6 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '@/lib/firebase/config';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Logo } from '../Logo';
@@ -45,18 +43,21 @@ export function SignUpForm() {
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    // Mock signup logic
+    form.clearErrors();
     try {
-      await createUserWithEmailAndPassword(auth, values.email, values.password);
+      console.log('Mock signup attempt with:', values);
       toast({
-        title: 'Account Created!',
+        title: 'Account Created! (Mock)',
         description: "You've been successfully signed up.",
       });
+      // In a real app with state management, you'd set the user state here.
       router.push('/dashboard');
     } catch (error: any) {
       toast({
         variant: 'destructive',
         title: 'Uh oh! Something went wrong.',
-        description: error.message || 'There was a problem with your request.',
+        description: 'This is a mock error. Please try again.',
       });
     }
   };

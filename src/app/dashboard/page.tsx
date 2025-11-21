@@ -16,7 +16,7 @@ import { useAuth } from '@/hooks/useAuth';
 
 export default function DashboardPage() {
   const [amount, setAmount] = useState(10);
-  const { user } = useAuth();
+  const { user } = useAuth(); // This will be null or a mock user now
 
   return (
     <div className="flex justify-center items-start pt-10">
@@ -43,7 +43,7 @@ export default function DashboardPage() {
           </div>
         </CardContent>
         <CardFooter>
-          {user && <PaymentButton amount={amount} user={user} />}
+          <PaymentButton amount={amount} user={user} />
         </CardFooter>
       </Card>
     </div>
