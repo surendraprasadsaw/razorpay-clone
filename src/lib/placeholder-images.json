@@ -109,6 +109,12 @@
       "imageHint": "business meeting"
     },
     {
+      "id": "powering-saas",
+      "description": "A man smiling at his phone while working on a laptop in a cafe.",
+      "imageUrl": "https://images.unsplash.com/photo-1611095790444-1dfa35e37b52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYW4lMjBsYXB0b3AlMjBwaG9uZXxlbnwwfHx8fDE3NjkwOTU4ODV8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "man laptop phone"
+    },
+    {
       "id": "testimonial-anusree",
       "description": "Portrait of Anusree Goenka",
       "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjB3b21hbiUyMHByb2ZpbGV8ZW58MHx8fHwxNzY1OTg0MDUyfDA&ixlib=rb-4.1.0&q=80&w=1080",
