@@ -1,4 +1,4 @@
-RozarPay  (using next.js)
+RazorPay  (using next.js)
 
 
 USING:
